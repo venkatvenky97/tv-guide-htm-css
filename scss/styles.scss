@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@import 'fonts';
+@import 'header/header';
+@import 'footer';
+
+@import 'components/index';
+@import 'pages/index';
+@import 'modals/settings';
+@import 'modals/sign-in';
+@import 'modals/sign-up';
+@import 'modals/listing-filter';
+@import 'form-controls/index';
+
+@import 'slick';
+
+
+a {
+    &:hover {
+        cursor: pointer;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+

@@ -1,0 +1,391 @@
+@import '../variables';
+
+$c-aside-border: #525252;
+$c-genre-comedy: #3253cf;
+$c-special-channel-bg: #fb431d;
+
+#time-bar {
+    height: 24px;
+    background: $c-gray-1;
+    max-width: 1440px;
+
+    @media (min-width: 576px) {
+        height: 36px;
+    }
+
+    .slick-list {
+        padding-left: 70px;
+
+        @media (min-width: 576px) {
+            padding-left: 100px;
+        }
+    }
+
+    .slick-slide {
+        width: 120px;
+        font-size: 15px;
+        margin-right: 16px;
+
+        @media (min-width: 576px) {
+            width: 200px;
+            font-size: 18px;
+        }
+
+        &:nth-child(odd) {
+            font-weight: 700;
+        }
+    }
+}
+
+#grid {
+    max-width: 1440px;
+
+    .time-line {
+        width: 1px;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        background: red;
+        z-index: 1;
+        box-shadow: 0 0 5px $c-black;
+    }
+
+    .grid-item {
+        margin-right: 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .c-card {
+        cursor: pointer;
+        background-image: url($IMG_PATH + '/home/grid/card.jpg');
+
+        &.lg {
+            background-image: url($IMG_PATH + '/home/grid/card-lg.jpg');
+
+            .c-card-content {
+                width: 250px;
+
+                @media (min-width: 576px) {
+                    width: 416px;
+                }
+            }
+        }
+
+        .c-card-content {
+            padding: 10px;
+            width: 120px;
+            height: 70px;
+
+            @media (min-width: 576px) {
+                height: 112px;
+                width: 200px;
+            }
+        }
+
+        h6 {
+            font-size: 10px;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-size: 12px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1;
+
+            @media (min-width: 576px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .grid-row {
+        overflow: hidden;
+        position: relative;
+
+        .ad {
+            height: 150px;
+
+            @media (min-width: 576px) {
+                height: 250px;
+            }
+        }
+
+        .row {
+            margin-bottom: 15px;
+        }
+    }
+
+    .channel-info,
+    .genre-info {
+        min-width: 70px;
+        background: $c-gray-3;
+        z-index: 2;
+        margin-right: 10px;
+        box-shadow: 0 0 100px rgba($c-black, .9);
+
+        @media (min-width: 576px) {
+            min-width: 100px;
+        }
+    }
+
+    .channel-info {
+
+        &.special {
+            background: 0;
+
+            .caption {
+                color: $c-white;
+                font-style: italic;
+                font-weight: 700;
+
+                @media (max-width: 575px) {
+                    font-size: 9px;
+                }
+            }
+        }
+
+        img {
+            width: 50px;
+
+            @media (min-width: 576px)  {
+                width: 60px;
+            }
+        }
+    }
+
+    .genre-info {
+        border-right: 3px solid;
+        font-size: 12px;
+        padding-bottom: 15px;
+        position: relative;
+
+        &:after {
+            content: '';
+            width: 3px;
+            height: calc(100% - 15px);
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+
+        &.comedy {
+            &:after {
+                background: $c-genre-comedy;
+            }
+        }
+
+        &.soap {
+            &:after {
+                background: $c-accent-2;
+            }
+        }
+    }
+
+    .rows {
+        min-width: 15000px;
+        position: relative;
+
+        .special-channel {
+            background-image: url($IMG_PATH + '/home/grid/spaecial-channel-bg.jpg');
+            background-repeat: repeat !important;
+
+            + .grid-row .row {
+                padding-top: 15px;
+            }
+
+            .wrapper {
+                padding: 14px 0 14px 10px;
+                margin-left: -10px;
+
+                @media (min-width: 576px) {
+                    padding: 25px 0 25px 10px;
+                }
+            }
+        }
+
+        .channel-title,
+        .channel-secondary-title {
+            position: absolute;
+            left: 25px;
+            font-size: 10px;
+            line-height: 14px;
+            font-style: italic;
+            font-weight: 800;
+
+            @media (min-width: 576px) {
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+
+        .channel-title {
+            color: $c-black;
+            top: 0;
+        }
+
+        .channel-secondary-title {
+            color: $c-white;
+            bottom: 0;
+        }
+    }
+
+}
+
+#grid,
+#now-next-grid {
+    overflow: hidden;
+
+    .rows {
+        min-width: 15000px;
+        transition: transform .3s;
+        padding-top: 16px;
+
+        .row .ad {
+            img {
+                height: 150px;
+
+                @media (min-width: 576px) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+    .channel-info {
+        .caption {
+            font-size: 10px;
+            color: $c-gray-4;
+            margin-top: 5px;
+
+            @media (min-width: 576px) {
+                font-size: 11px;
+            }
+
+            &.ad {
+                font-size: 9px;
+                color: $c-gray-4;
+
+                @media (min-width: 576px) {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+}
+
+#now-next-grid {
+    position: relative;
+    border-left: 20px solid $c-gray-3;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        box-shadow: 0 0 100px 20px $c-black;
+    }
+
+    .controls {
+        z-index: 2;
+        position: relative;
+
+        span {
+            background: $c-accent-2;
+            color: $c-white;
+            cursor: pointer;
+            font-size: 26px;
+            height: 36px;
+            width: 36px;
+            position: absolute;
+            top: calc(85px - 18px);
+
+            @media (min-width: 576px) {
+                top: calc(58px + 87px - 18px);
+            }
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    }
+
+    .channel {
+        img {
+            width: 45px;
+
+            @media (min-width: 576px) {
+                width: 60px;
+            }
+        }
+    }
+
+    .c-card {
+        width: 110px;
+        height: 70px;
+        background-image: url($IMG_PATH + '/home/now-next/poster.jpg');
+        margin-right: 16px;
+
+        @media (min-width: 576px) {
+            width: 284px;
+            height: 160px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 312px;
+            height: 174px;
+        }
+
+        .score {
+            line-height: 1;
+            font-size: 10px;
+        }
+
+        .popularity {
+            @media (max-width: 575px) {
+                font-size: 9px;
+            }
+        }
+    }
+
+    .title {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 21px;
+        }
+    }
+
+    .start-time {
+        font-size: 10px;
+
+        @media (min-width: 576px) {
+            font-size: 14px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 16px;
+        }
+    }
+}

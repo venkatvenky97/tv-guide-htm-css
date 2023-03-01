@@ -1,0 +1,224 @@
+@import '../variables';
+
+$c-time-select: #676767;
+$c-search-value: #a4fcff;
+
+#listing-search {
+    height: 222px;
+    padding: 0 15px 30px;
+    background: $c-gray-1;
+
+    @media (min-width: 992px) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .form-wrapper {
+        max-width: 648px;
+
+        @media (min-width: 992px) {
+            max-width: 904px;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 1208px;
+        }
+    }
+
+    form {
+        position: relative;
+    }
+
+    input {
+        height: 50px;
+        width: 100%;
+        border-radius: 50px;
+        border: 0;
+        font-size: 21px;
+        padding: 0 25px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        border: 0;
+        background: 0;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 36px;
+        cursor: pointer;
+        transition: color .25s;
+        &:hover {
+            color: $c-accent-2;
+        }
+    }
+}
+
+#listing-section {
+    padding: 20px 15px 0;
+    background: $c-gray-1;
+
+    @media (min-width: 768px) {
+        padding: 25px 60px 0;
+    }
+
+    @media (min-width: 1200px) {
+        //padding: 5px 60px 0;
+        padding-top: 5px;
+    }
+
+    > div {
+        @media (min-width: 1200px) {
+            max-width: 1208px;
+        }
+    }
+
+
+    aside {
+
+        @media (min-width: 576px) {
+            min-width: 228px;
+        }
+
+        @media (min-width: 576px) and (max-width: 991px) {
+            max-width: 619px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+
+            @media (min-width: 576px) {
+                font-size: 32px;
+            }
+        }
+
+        form {
+            input {
+                border: 0;
+                border-radius: 50px;
+                font-size: 16px;
+                padding: 8px 40px 8px 20px;
+                @include placeholder-color($c-black);
+
+                @media (min-width: 576px) {
+                    font-size: 18px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background: 0;
+                border: 0;
+                font-size: 33px;
+                right: 0;
+                top: 3px;
+                line-height: 1;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .filters-btn {
+            background: $c-btn-primary;
+            border: 0;
+            border-radius: 50px;
+            height: 30px;
+            width: 30px;
+            color: $c-white;
+            font-size: 26px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba($c-black, 0.5);
+
+            @media (min-width: 576px) {
+                height: 46px;
+                width: 46px;
+                font-size: 40px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .content {
+        @media (max-width: 991px) {
+            max-width: 625px;
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            padding-left: 20px;
+        }
+
+        @media (min-width: 1200px) {
+            padding-left: 40px;
+        }
+
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    .search-result {
+        font-size: 14px;
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 21px;
+        }
+
+        .value {
+            color: $c-search-value;
+        }
+    }
+
+    .c-select.time {
+        width: 123px;
+
+        @media (min-width: 576px) {
+            width: 142px;
+        }
+    }
+
+    .grid-item {
+        max-width: 320px;
+        padding: 0 10px;
+
+        @media (min-width: 576px) {
+            min-width: 320px;
+        }
+    }
+
+    .c-card {
+        background-image: url($IMG_PATH + '/tv-listings/card-bg.jpg');
+        height: 175px;
+        margin-bottom: 20px;
+
+        .desc {
+            padding: 0 8px 10px 12px;
+        }
+    }
+
+    .c-card-content {
+        height: 175px;
+    }
+}

@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <title>TVGuide - Genre</title>
+
+</head>
+<body>
+
+<div class="page genre-page">
+
+    <nav id="sidebar" class="text-white">
+
+        <div class="sidebar-header d-flex position-relative">
+            <a href="#" class="log-out position-absolute">log out</a>
+            <div class="avatar mr-3 d-flex align-items-center">
+                <span class="icon-user-solid-circle"></span>
+            </div>
+            <div>
+                <div class="label">Logged in as:</div>
+                <div class="email">francisco@tvguide.co.uk</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <nav>
+                <ul class="list-unstyled">
+                    <li class="active">
+                        <a href="#">TV Guide</a>
+                        <ul class="list-unstyled mt-2 sub-nav">
+                            <li>
+                                <a href="#">Channels</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">Genre</a>
+                            </li>
+                            <li>
+                                <a href="#">VOD</a>
+                            </li>
+                            <li>
+                                <a href="trending.html">Trending</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="new-on-tv.html">New On TV</a>
+                    </li>
+                    <li>
+                        <a href="new-films.html">New Films</a>
+                    </li>
+                    <li>
+                        <a href="sports.html">Sports</a>
+                    </li>
+                    <li>
+                        <a href="football.html">Football</a>
+                    </li>
+                    <li>
+                        <a href="my-calendar.html" class="d-flex justify-content-between">
+                            My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-inline-flex align-items-center">
+                            <span class="icon-cog mr-3"></span> Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+
+
+    <div id="page-content">
+
+        <header id="main-header">
+
+            <div class="ad text-center d-none d-sm-block">
+                <a href="#">
+                    <img class="img-fluid" src="img/banner.jpg">
+                </a>
+            </div>
+
+            <div class="position-relative d-flex flex-column align-items-center header-content">
+                <div class="nav-wrapper w-100 nav-wrapper-js">
+                    <div class="container-fluid">
+                        <div class="justify-content-between align-items-start d-none d-xl-flex">
+                            <nav class="nav-a">
+                                <ul class="list-unstyled d-flex m-0">
+                                    <li>
+                                        <a href="#">
+                                            <img src="img/logo.png" alt="TVGuide">
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="tv-listings.html">TV Listings</a>
+                                    </li>
+                                    <li>
+                                        <a href="new-on-tv.html"> New on TV</a>
+                                    </li>
+                                    <li>
+                                        <a href="new-films.html">New Films</a>
+                                    </li>
+                                    <li>
+                                        <a href="sports.html">Sports</a>
+                                    </li>
+                                    <li>
+                                        <a href="football.html">Football</a>
+                                    </li>
+                                    <li>
+                                        <a href="my-calendar.html">
+                                            My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+                                <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                            </div>
+                        </div>
+                        <div class="d-flex d-xl-none justify-content-between align-items-center align-items-xl-start text-white mobile-nav">
+                            <div class="d-flex">
+                                <a href="#" class="d-flex align-items-center" >
+                                    <img src="img/logo.png">
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                    <span class="icon-menu"></span>
+                                </a>
+                                <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                    <span class="icon-user-solid-circle"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="active-item active-episode-js d-flex">
+                    <div class="bg-layer"></div>
+                    <div class="container-fluid d-flex justify-content-end flex-column">
+                        <h1 class="text-white title">Doctor Who</h1>
+                        <div class="d-flex align-items-start">
+                            <img src="img/channels/bbc-one.png" class="mr-2 mr-sm-3 channel-logo">
+                            <div class="text-white">
+                                <div class="start-time font-weight-bold">9.00pm Tomorrow</div>
+                                <div class="episode">Season 11 Episode 1</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav-b align-items-center">
+            <div class="container-fluid d-flex justify-content-center justify-content-md-between">
+                <ul class="list-unstyled m-0 d-none d-md-flex">
+                    <li>
+                        <a href="index.html">Channel</a>
+                    </li>
+                    <li class="active">
+                        <a href="genre.html">Genre</a>
+                    </li>
+                    <li>
+                        <a href="vod.html">VOD</a>
+                    </li>
+                    <li>
+                        <a href="trending.html">Trending</a>
+                    </li>
+                </ul>
+                <div class="mobile-search d-flex align-items-center">
+                    <form action="" class="form-inline my-2 my-lg-0">
+                        <input class="form-control" type="search" placeholder="Search for Shows or Films ..." aria-label="Search for Shows or Films">
+                        <button type="submit">
+                            <span class="icon-search"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <nav id="grid-menu" class="text-white d-flex align-items-center">
+            <div class="container-fluid d-flex justify-content-between w-100 h-100">
+                <ul class="list-unstyled d-flex m-0 nav">
+                    <li class="d-flex">
+                        <a data-toggle="modal" data-target="#settings-modal" data-backdrop="static" class="d-inline-flex">
+                            <span class="icon-cog"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown ml-3 ml-md-5">
+                        <a class="dropdown-toggle" href="#" role="button" id="todayMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Today <span class="ml-2 icon-chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="todayMenu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="nowMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Now <span class="ml-2 icon-chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="nowMenu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="dropdown d-none d-md-flex">
+                        <a class="dropdown-toggle" href="#" role="button" id="genreMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre <span class="ml-2 icon-chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="genreMenu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="d-none d-xl-flex ml-md-3">
+                        <form action="">
+                            <label class="m-0 d-flex align-items-center">
+                                Find Channel
+                                <input type="text" class="text-white ml-2">
+                                <button type="submit">
+                                    <span class="icon-search text-white"></span>
+                                </button>
+                            </label>
+                        </form>
+                    </li>
+                </ul>
+                <div class="right d-inline-flex align-items-center">
+                    <span class="date-js d-none d-md-inline date"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-0">
+            <div id="time-bar" class="time-bar-js text-white d-flex align-items-center">
+                <div>12:00 AM</div>
+                <div>12:30 AM</div>
+                <div>1:00 AM</div>
+                <div>1:30 AM</div>
+                <div>2:00 AM</div>
+                <div>2:30 AM</div>
+                <div>3:00 AM</div>
+                <div>3:30 AM</div>
+                <div>4:00 AM</div>
+                <div>4:30 AM</div>
+                <div>5:00 AM</div>
+                <div>5:30 AM</div>
+                <div>6:00 AM</div>
+                <div>6:30 AM</div>
+                <div>7:00 AM</div>
+                <div>7:30 AM</div>
+                <div>8:00 AM</div>
+                <div>8:30 AM</div>
+                <div>9:00 AM</div>
+                <div>9:30 AM</div>
+                <div>10:00 AM</div>
+                <div>10:30 AM</div>
+                <div>11:00 AM</div>
+                <div>11:30 AM</div>
+
+                <div>12:00 PM</div>
+                <div>12:30 PM</div>
+                <div>1:00 PM</div>
+                <div>1:30 PM</div>
+                <div>2:00 PM</div>
+                <div>2:30 PM</div>
+                <div>3:00 PM</div>
+                <div>3:30 PM</div>
+                <div>4:00 PM</div>
+                <div>4:30 PM</div>
+                <div>5:00 PM</div>
+                <div>5:30 PM</div>
+                <div>6:00 PM</div>
+                <div>6:30 PM</div>
+                <div>7:00 PM</div>
+                <div>7:30 PM</div>
+                <div>8:00 PM</div>
+                <div>8:30 PM</div>
+                <div>9:00 PM</div>
+                <div>9:30 PM</div>
+                <div>10:00 PM</div>
+                <div>10:30 PM</div>
+                <div>11:00 PM</div>
+                <div>11:30 PM</div>
+            </div>
+
+            <section id="grid" class="d-flex">
+
+                <div class="content rows" id="grid-js">
+                    <div class="current-time-line"></div>
+
+                    <div class="grid-row d-flex">
+                        <div class="genre-info d-flex flex-column justify-content-center align-items-center comedy">
+                            <span class="font-weight-bold text-white">comedy</span>
+                        </div>
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-row d-flex">
+                        <div class="genre-info d-flex flex-column justify-content-center align-items-center soap">
+                            <span class="font-weight-bold text-white">comedy</span>
+                        </div>
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-row d-flex">
+                        <div class="genre-info d-flex flex-column justify-content-center align-items-center">
+                        </div>
+                        <div class="w-100">
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <div class="text-white d-flex flex-column justify-content-center add-genre">
+                                        <h4 class="mb-3 mb-sm-4">Add another genre, choose to add</h4>
+                                        <div class="c-select mb-3">
+                                            <select data-container="body" class="selectpicker">
+                                                <option selected>Genre</option>
+                                                <option value="1">Comedy</option>
+                                                <option value="2">Soap</option>
+                                            </select>
+                                            <div class="outline"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <footer id="main-footer">
+            <div class="container-fluid d-flex flex-column flex-md-row">
+                <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                    <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                </div>
+                <div class="content d-flex align-items-center flex-column align-items-md-start">
+                    <nav>
+                        <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li>
+                                <a href="#">Advertise</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#">Manage consent</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="copyright text-center text-sm-left">
+                        © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                        <a href="#">Now in 50 Countries!</a>
+                    </div>
+                    <div>
+                        <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                        <form action="">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="text-uppercase">Go</button>
+                        </form>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row align-items-center">
+                        <div class="social mr-sm-5 mb-3 mb-sm-0">
+                            <a href="#" class="facebook mr-2">
+                                <span class="icon-facebook"></span>
+                            </a>
+                            <a href="#" class="twitter mr-2">
+                                <span class="icon-twitter"></span>
+                            </a>
+                            <a href="#" class="linkedin mr-2">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                            <a href="#" class="snapchat">
+                                <span class="icon-snapchat-ghost"></span>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" class="mr-1">
+                                <img src="img/google-play.svg" alt="Get it on Google Play">
+                            </a>
+                            <a href="#">
+                                <img src="img/app-store.svg" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="sidenav-overlay"></div>
+</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/moment.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initGrid();
+
+        $('.c-select select').selectpicker();
+
+        setTime();
+
+        $(window).on('resize', setTime);
+
+        function setTime() {
+            const width = $(window).width();
+            if (width > 1200) {
+                $('#grid-menu .date-js').text(moment().format("dddd, D MMMM"));
+            } else {
+                $('#grid-menu .date-js').text(moment().format("ddd D MMM"));
+            }
+        }
+
+    });
+
+    function initGrid() {
+        $('.time-bar-js').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 8,
+            draggable: false,
+            touchMove: false,
+            centerMode: false,
+            variableWidth: true
+        });
+
+        $('.time-bar-js').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            let width;
+
+            if ($(window).width() > 575) {
+                width = nextSlide * 216;
+            } else {
+                width = nextSlide * 130;
+            }
+
+            $('#grid #grid-js').css('transform', `translateX(-${width}px)`);
+        });
+
+        updateLinePos();
+
+        setInterval(function() {
+            updateLinePos();
+        }, (1000 * 60));
+
+
+
+        function updateLinePos() {
+            const date = moment();
+            const hours = date.hour();
+            const minutes = date.minutes();
+            const slideWidth = $('.time-bar-js .slick-slide').width() + 16;
+            const percents = Number((minutes / 60).toFixed(2));
+            const total = (slideWidth * hours) * 2 + (slideWidth * 2) * percents;
+
+            $('.current-time-line').css('left', `${total}px`);
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+
+    });
+</script>
+</body>
+</html>

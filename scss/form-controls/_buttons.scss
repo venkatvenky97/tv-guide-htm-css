@@ -1,0 +1,81 @@
+@import '../variables';
+
+.c-button {
+    //padding: 9px 15px;
+    text-transform: uppercase;
+    min-width: 124px;
+    color: $c-white;
+    border: 0;
+    border-radius: 4px;
+    //font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba($c-black, .5);
+    transition: background .25s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &.s-sm {
+        font-size: 12px;
+        padding: 9px 15px;
+    }
+
+    &.s-md {
+        font-size: 13px;
+        padding: 13px 33px;
+
+        &-xs {
+            @media (min-width: 576px) {
+                font-size: 13px;
+                padding: 13px 33px;
+            }
+        }
+    }
+
+
+    &.muted {
+        background: $c-btn-default;
+        &:hover {
+            background: darken($c-btn-default, 5%);
+        }
+    }
+
+    &.primary {
+        background: $c-btn-primary;
+        &:hover {
+            background: darken($c-btn-primary, 5%);
+        }
+    }
+
+    &.success {
+        background: $c-btn-success;
+        &:hover {
+            background: darken($c-btn-success, 5%);
+        }
+    }
+
+    &.facebook {
+        background: $c-facebook;
+        position: relative;
+
+        &:hover {
+            background: darken($c-facebook, 5%);
+        }
+
+        .icon-facebook {
+            font-size: 28px;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+}

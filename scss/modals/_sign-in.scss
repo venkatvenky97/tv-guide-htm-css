@@ -1,0 +1,77 @@
+@import '../variables';
+
+#sign-in-modal {
+    .modal-dialog {
+        max-width: 464px;
+        padding-top: 30px;
+
+        @media (min-width: 576px) {
+            padding-top: 60px;
+        }
+
+        @media (min-width: 992px) {
+            max-width: 900px;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+        @media (min-width: 576px) {
+            font-size: 32px;
+        }
+    }
+
+    h4 {
+        font-size: 14px;
+        @media (min-width: 576px) {
+            font-size: 21px;
+        }
+    }
+
+    .sign-up-link {
+        color: $c-accent-2;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 700;
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+    }
+
+    .input-group {
+        input {
+            background: 0;
+            border: 0;
+            border-bottom: 1px solid $c-white;
+            color: $c-white;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .buttons {
+        padding: 0;
+
+        @media (min-width: 992px) {
+            padding-left: 45px;
+            margin-left: 45px;
+        }
+
+        @media (min-width: 1200px) {
+            border-left: 1px solid $c-white;
+        }
+
+        a, button {
+            @media (min-width: 567px) and (max-width: 991px) {
+                width: 270px;
+            }
+        }
+    }
+
+
+}

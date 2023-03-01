@@ -1,0 +1,47 @@
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+}
+
+@mixin set-popover-arrow-color($color) {
+    $list: left right top bottom;
+    @each $side in $list {
+        &[x-placement^=#{$side}] {
+            .arrow::after {
+                border-#{$side}-color: $color;
+            }
+        }
+    }
+}
+
+@mixin set-league-row-color($colors) {
+
+    $classes: pos club pld pts;
+
+    @for $i from 1 through length($classes) {
+        .#{nth($classes, $i)} {
+            background: nth($colors, $i);
+        }
+    }
+
+}
+
+@mixin set-categories-bg($classes, $colors) {
+    @for $i from 1 through length($classes) {
+        &.#{nth($classes, $i)} {
+            background: nth($colors, $i);
+        }
+    }
+}
+
+

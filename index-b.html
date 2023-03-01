@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <title>TVGuide</title>
+  </head>
+  <body>
+    <div class="page home-page">
+      <nav id="sidebar" class="text-white">
+        <div class="sidebar-header d-flex position-relative">
+          <a href="#" class="log-out position-absolute">log out</a>
+          <div class="avatar mr-3 d-flex align-items-center">
+            <span class="icon-user-solid-circle"></span>
+          </div>
+          <div>
+            <div class="label">Logged in as:</div>
+            <div class="email">francisco@tvguide.co.uk</div>
+          </div>
+        </div>
+
+        <div class="content">
+          <nav>
+            <ul class="list-unstyled">
+              <li class="active">
+                <a href="#">TV Guide</a>
+                <ul class="list-unstyled mt-2 sub-nav">
+                  <li class="active">
+                    <a href="#">Channels</a>
+                  </li>
+                  <li>
+                    <a href="#">Genre</a>
+                  </li>
+                  <li>
+                    <a href="#">VOD</a>
+                  </li>
+                  <li>
+                    <a href="trending.html">Trending</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="new-on-tv.html">New On TV</a>
+              </li>
+              <li>
+                <a href="new-films.html">New Films</a>
+              </li>
+              <li>
+                <a href="#" class="d-inline-flex align-items-center">
+                  <span class="icon-cog mr-3"></span> Settings
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+
+      <div id="page-content">
+        <header id="main-header">
+          <div class="ad text-center d-none d-sm-block">
+            <a href="#">
+              <img class="img-fluid" src="img/banner.jpg" />
+            </a>
+          </div>
+
+          <div
+            class="position-relative d-flex flex-column align-items-center header-content"
+          >
+            <div class="nav-wrapper w-100 nav-wrapper-js">
+              <div class="container-fluid">
+                <div
+                  class="justify-content-between align-items-start d-none d-xl-flex"
+                >
+                  <nav class="nav-a">
+                    <ul class="list-unstyled d-flex m-0">
+                      <li>
+                        <a href="#">
+                          <img src="img/logo.png" alt="TVGuide" />
+                        </a>
+                      </li>
+                      <li class="active">
+                        <a href="tv-listings.html">TV Listings</a>
+                      </li>
+                      <li>
+                        <a href="new-on-tv.html"> New on TV</a>
+                      </li>
+                      <li>
+                        <a href="new-films.html">New Films</a>
+                      </li>
+                      <li>
+                        <a href="sports.html">Sports</a>
+                      </li>
+                      <li>
+                        <a href="football.html">Football</a>
+                      </li>
+                      <li>
+                        <a href="my-calendar.html">
+                          My Calendar
+                          <span class="badge badge-light text-white ml-2"
+                            >10</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div
+                    class="d-flex align-items-center flex-grow-1 justify-content-end"
+                  >
+                    <a
+                      href="#"
+                      class="sign-in"
+                      data-toggle="modal"
+                      data-target="#sign-in-modal"
+                      data-backdrop="static"
+                      >Sign In</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="d-flex d-xl-none justify-content-between align-items-center align-items-xl-start text-white mobile-nav"
+                >
+                  <div class="d-flex">
+                    <a href="#" class="d-flex align-items-center">
+                      <img src="img/logo.png" />
+                    </a>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <a
+                      href="#"
+                      id="sidebarCollapse"
+                      class="text-white sidenav-btn mr-4"
+                    >
+                      <span class="icon-menu"></span>
+                    </a>
+                    <a
+                      data-toggle="modal"
+                      data-target="#sign-in-modal"
+                      data-backdrop="static"
+                      class="user-nav-btn"
+                    >
+                      <span class="icon-user-solid-circle"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="active-item active-episode-js d-flex">
+              <div class="bg-layer"></div>
+              <div
+                class="container-fluid d-flex justify-content-end flex-column"
+              >
+                <h1 class="text-white title">Doctor Who</h1>
+                <div class="d-flex align-items-start">
+                  <img
+                    src="img/channels/bbc-one.png"
+                    class="mr-2 mr-sm-3 channel-logo"
+                  />
+                  <div class="text-white">
+                    <div class="start-time font-weight-bold">
+                      9.00pm Tomorrow
+                    </div>
+                    <div class="episode">Season 11 Episode 1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <nav class="nav-b align-items-center">
+          <div
+            class="container-fluid d-flex justify-content-center justify-content-md-between"
+          >
+            <ul class="list-unstyled m-0 d-none d-md-flex">
+              <li class="active">
+                <a href="index.html">Channel</a>
+              </li>
+              <li>
+                <a href="genre.html">Genre</a>
+              </li>
+              <li>
+                <a href="vod.html">VOD</a>
+              </li>
+              <li>
+                <a href="trending.html">Trending</a>
+              </li>
+            </ul>
+            <div class="mobile-search d-flex align-items-center">
+              <form action="" class="form-inline my-2 my-lg-0">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search for Shows or Films ..."
+                  aria-label="Search for Shows or Films"
+                />
+                <button type="submit">
+                  <span class="icon-search"></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <nav class="nav-c text-white d-flex align-items-center">
+          <div class="container-fluid d-flex justify-content-between w-100">
+            <ul class="list-unstyled d-flex m-0">
+              <li class="d-none d-md-flex">
+                <span class="icon-cog"></span>
+              </li>
+              <li class="dropdown d-none d-md-flex">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="genreMenu"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Genre
+                </a>
+                <div class="dropdown-menu" aria-labelledby="genreMenu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="dropdown">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="todayMenu"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Today
+                </a>
+                <div class="dropdown-menu" aria-labelledby="todayMenu">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="d-none d-md-flex">
+                <form action="">
+                  <label class="m-0 d-flex align-items-center">
+                    Find Channel
+                    <span class="d-none d-xl-inline-flex">
+                      <input type="text" class="text-white ml-2" />
+                      <button type="submit">
+                        <span class="icon-search text-white"></span>
+                      </button>
+                    </span>
+                  </label>
+                </form>
+              </li>
+            </ul>
+            <div class="right d-inline-flex align-items-center">
+              <span class="date-js d-none d-md-inline date"></span>
+              <a href="index.html" class="ml-5 layout-btn">
+                <img src="img/header/icon-view-b.svg" />
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="container-fluid p-0">
+          <section id="now-next-grid">
+            <div class="controls d-flex justify-content-between">
+              <span
+                class="icon-chevron-left prev d-flex invisible align-items-center justify-content-center"
+              ></span>
+              <span
+                class="icon-chevron-right next d-flex align-items-center justify-content-center"
+              ></span>
+            </div>
+            <div class="pt-3 rows" id="grid-js">
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <div class="channel d-flex align-items-center">
+                    <img src="img/channels/bbc-one.png" alt="BBC One" />
+                    <div class="caption ml-2">101</div>
+                  </div>
+                </div>
+                <div class="col d-flex mb-4">
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 mb-2">
+                  <div class="channel d-flex align-items-center">
+                    <img src="img/channels/bbc-two.png" alt="BBC Two" />
+                    <div class="caption ml-2">101</div>
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 mb-2">
+                  <div class="channel d-flex align-items-center">
+                    <img src="img/channels/itv.png" alt="ITV" />
+                    <div class="caption ml-2">101</div>
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 mb-2">
+                  <div class="channel d-flex align-items-center">
+                    <img src="img/channels/four.png" alt="Four" />
+                    <div class="caption ml-2">101</div>
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 mb-2">
+                  <div class="channel d-flex align-items-center">
+                    <img src="img/channels/five.png" alt="Five" />
+                    <div class="caption ml-2">101</div>
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div>
+                    <div class="c-card d-flex mb-2">
+                      <div class="c-card-content d-flex flex-column flex-fill">
+                        <div class="score d-flex d-sm-none pt-1 pl-1">7.3</div>
+                        <div
+                          class="d-none d-sm-flex justify-content-end align-items-start col p-0"
+                        >
+                          <span class="badge text-uppercase">Drama</span>
+                        </div>
+                        <div class="col d-flex align-items-end p-0">
+                          <div
+                            class="px-1 px-sm-3 pb-1 pb-sm-2 d-flex flex-fill justify-content-between"
+                          >
+                            <h6
+                              class="episode m-0 d-none d-sm-flex align-items-center"
+                            >
+                              S1 E3
+                            </h6>
+                            <div class="d-flex align-items-center">
+                              <div class="rating d-none d-sm-flex">
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full filled"></span>
+                                <span class="icon-star-full"></span>
+                              </div>
+                              <span
+                                class="popularity ml-sm-2 up d-flex align-items-center"
+                              >
+                                Popularity: 62556
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h5 class="title text-white mb-1">Wanderlust</h5>
+                    <h6 class="start-time font-weight-bold text-white m-0">
+                      21:00
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer id="main-footer">
+          <div class="container-fluid d-flex flex-column flex-md-row">
+            <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+              <a href="#"><img src="img/logo.png" alt="TVGuide" /></a>
+            </div>
+            <div
+              class="content d-flex align-items-center flex-column align-items-md-start"
+            >
+              <nav>
+                <ul
+                  class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start"
+                >
+                  <li>
+                    <a href="#">About us</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact us</a>
+                  </li>
+                  <li>
+                    <a href="#">Advertise</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy</a>
+                  </li>
+                  <li>
+                    <a href="#">Manage consent</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="copyright text-center text-sm-left">
+                © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved &
+                trademarks acknowledged.
+                <a href="#">Now in 50 Countries!</a>
+              </div>
+              <div>
+                <div class="tip mb-2 mb-sm-0">
+                  Never miss a show sign up to our newsletter:
+                </div>
+                <form action="">
+                  <input type="email" placeholder="Enter your email" required />
+                  <button type="submit" class="text-uppercase">Go</button>
+                </form>
+              </div>
+              <div class="d-flex flex-column flex-sm-row align-items-center">
+                <div class="social mr-sm-5 mb-3 mb-sm-0">
+                  <a href="#" class="facebook mr-2">
+                    <span class="icon-facebook"></span>
+                  </a>
+                  <a href="#" class="twitter mr-2">
+                    <span class="icon-twitter"></span>
+                  </a>
+                  <a href="#" class="linkedin mr-2">
+                    <span class="icon-linkedin"></span>
+                  </a>
+                  <a href="#" class="snapchat">
+                    <span class="icon-snapchat-ghost"></span>
+                  </a>
+                </div>
+                <div>
+                  <a href="#" class="mr-1">
+                    <img
+                      src="img/google-play.svg"
+                      alt="Get it on Google Play"
+                    />
+                  </a>
+                  <a href="#">
+                    <img
+                      src="img/app-store.svg"
+                      alt="Download on the App Store"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <div id="sidenav-overlay"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/moment.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        initSidenav();
+        initHomeGrid();
+        setTime();
+        $(window).on("resize", setTime);
+      });
+
+      function setTime() {
+        const width = $(window).width();
+        if (width > 1200) {
+          $(".nav-c .date-js").text(moment().format("dddd, D MMMM"));
+        } else {
+          $(".nav-c .date-js").text(moment().format("ddd D MMM"));
+        }
+      }
+
+      function initHomeGrid() {
+        let index = 0;
+
+        $("#now-next-grid .controls .next").on("click", function () {
+          index++;
+          const width =
+            index * ($("#now-next-grid .c-card").eq(0).width() + 16);
+          $("#now-next-grid #grid-js").css(
+            "transform",
+            `translateX(-${width}px)`
+          );
+          $("#now-next-grid .controls .prev").removeClass("invisible");
+        });
+
+        $("#now-next-grid .controls .prev").on("click", function () {
+          if (index > 0) {
+            index--;
+            const width =
+              index * ($("#now-next-grid .c-card").eq(0).width() + 16);
+            $("#now-next-grid #grid-js").css(
+              "transform",
+              `translateX(-${width}px)`
+            );
+            if (index === 0) {
+              $("#now-next-grid .prev").addClass("invisible");
+            }
+          }
+        });
+      }
+
+      function initSidenav() {
+        $("#dismiss, #sidenav-overlay, #sidebar .content ul a").on(
+          "click",
+          function () {
+            $("#sidebar").removeClass("active");
+            $("#sidenav-overlay").removeClass("active");
+            $("body").removeAttr("style");
+          }
+        );
+
+        $("#sidebarCollapse").on("click", function () {
+          $("#sidebar").addClass("active");
+          $("body").css("overflow", "hidden");
+          // fade in the overlay
+          $("#sidenav-overlay").addClass("active");
+          $(".collapse.in").toggleClass("in");
+          $("a[aria-expanded=true]").attr("aria-expanded", "false");
+        });
+      }
+    </script>
+  </body>
+</html>

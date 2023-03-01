@@ -1,0 +1,140 @@
+@import '../variables';
+
+$c-add-genre: #4285f4;
+$c-select-focus-border: #83c5ff;
+$c-select-dark: #676767;
+
+.c-select {
+    position: relative;
+
+    &.dark {
+        .bootstrap-select .btn {
+            background-color: $c-select-dark !important;
+        }
+    }
+
+    .bootstrap-select.show + .outline:before {
+        opacity: 1;
+    }
+
+    .outline {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 2px 8px rgba($c-black, 0.5);
+        top: 0;
+        left: 0;
+
+        &:before {
+            border-radius: 5px;
+            transition: opacity .25s;
+            top: -4px;
+            left: -4px;
+            content: '';
+            opacity: 0;
+            background: $c-select-focus-border;
+            position: absolute;
+            width: calc(100% + 6px - 30px);
+            height: calc(100% + 9px);
+
+            @media (min-width: 576px) {
+                width: calc(100% + 6px - 40px);
+            }
+        }
+    }
+
+    .bootstrap-select.dropdown {
+        width: 100%;
+    }
+}
+
+
+
+li.select-option {
+    font-size: 11px;
+    @media (min-width: 576px) {
+        font-size: 13px;
+    }
+}
+
+.c-select-wrapper {
+    max-width: 190px;
+    width: 100%;
+    border: 0;
+    position: relative;
+
+    select {
+        border-radius: 3px !important;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 7px 15px;
+        border: 0;
+        //min-height: 46px;
+        height: auto;
+        background: $c-add-genre url($IMG_PATH + '/select-arrow.svg') 90% 62% no-repeat;
+        background-size: 20px;
+        color: $c-white;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+
+        @media (min-width: 576px) {
+            font-size: 13px;
+            padding: 13px 20px;
+            background-size: initial;
+        }
+
+        option {
+            color: $c-black;
+            background: $c-white;
+        }
+
+        &:focus {
+            box-shadow: none;
+
+            + .outline:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    .outline {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 2px 8px rgba($c-black, 0.5);
+
+        &:before {
+            border-radius: 5px;
+            transition: opacity .25s;
+            top: -4px;
+            left: -4px;
+            content: '';
+            opacity: 0;
+            background: $c-select-focus-border;
+            position: absolute;
+            width: calc(100% + 6px - 30px);
+            height: calc(100% + 9px);
+
+            @media (min-width: 576px) {
+                width: calc(100% + 6px - 40px);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

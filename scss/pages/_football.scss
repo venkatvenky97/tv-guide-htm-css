@@ -1,0 +1,301 @@
+@import '../variables';
+@import '../mixins';
+
+$c-team-info: #8f8f8f;
+$c-first-row: #326370 #264c56 #1a343b #264c56;
+$c-teal-blue-row: #254953 #203034 #192629 #203034;
+$c-gray-row: #4c4c4c #3d3d3d #333333 #3d3d3d;
+$c-dark-red-row: #470000 #2d0000 #1d0000 #2d0000;
+
+.football-page {
+
+}
+
+#premier-league {
+    padding: 5px 15px 0;
+    background: $c-gray-1;
+
+    @media (min-width: 992px) {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+
+    > div {
+        max-width: 648px;
+        @media (min-width: 992px) {
+            max-width: 1208px;
+        }
+    }
+
+    h1 {
+        font-size: 18px;
+        @media (min-width: 576px) {
+            font-size: 32px;
+        }
+    }
+}
+
+.league-fixture-list {
+    max-width: 280px;
+    margin: auto;
+
+    @media (min-width: 576px) {
+        max-width: initial;
+    }
+
+    .date {
+        font-size: 14px;
+        color: $c-text-highlighted-2;
+        font-weight: 700;
+        border-bottom: 1px solid $c-white;
+        padding-bottom: 7px;
+        margin-bottom: 20px;
+
+        @media (min-width: 576px) {
+            font-size: 16px;
+        }
+    }
+
+    .league-fixture {
+        margin-bottom: 20px;
+    }
+
+    .start-time {
+        color: $c-text-highlighted-2;
+        font-size: 10px;
+        font-weight: 700;
+        margin-left: 10px;
+
+        @media (min-width: 576px) {
+            margin-right: 10px;
+            margin-left: 0;
+            font-size: 14px;
+        }
+    }
+
+    .channel-logo {
+        img {
+            width: 50px;
+
+            @media (min-width: 576px) {
+                width: 60px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 92px;
+            }
+        }
+    }
+
+    .teams {
+        width: 100%;
+        margin: 0 10px;
+
+        @media (min-width: 576px) {
+            max-width: 384px;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: 440px;
+        }
+    }
+
+    .team-logo {
+        img {
+            max-width: 45px;
+            max-height: 45px;
+            @media (min-width: 1200px) {
+                max-width: initial;
+                max-height: initial;
+            }
+        }
+    }
+
+    .vs {
+        color: $c-text-highlighted-2;
+        font-size: 14px;
+
+        .score {
+            font-size: 14px;
+
+            @media (min-width: 576px) {
+                font-size: 18px;
+                color: $c-white;
+            }
+        }
+    }
+
+    .team-name {
+        font-size: 12px;
+
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+    }
+
+    .divider {
+        height: 1px;
+        background: $c-white;
+        margin: 5px 0;
+    }
+
+    .info {
+        font-size: 10px;
+        color: $c-team-info;
+    }
+
+    .icon-bell {
+        font-size: 14px;
+        border: 1px solid $c-white;
+        border-radius: 50%;
+        height: 29px;
+        width: 29px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+
+        @media (min-width: 576px) {
+            height: 32px;
+            width: 32px;
+            font-size: 18px;
+        }
+
+        @media (min-width: 1200px) {
+            height: 38px;
+            width: 38px;
+        }
+    }
+
+    .calendar {
+        width: 29px;
+
+        @media (min-width: 576px) {
+            width: 32px;
+        }
+
+        @media (min-width: 1200px) {
+            width: 40px;
+        }
+    }
+}
+
+.league-table {
+    padding-left: 25px;
+
+    @media (min-width: 1200px) {
+        padding-left: 45px;
+    }
+
+    .title {
+        font-size: 16px;
+        color: $c-text-highlighted-2;
+        border-bottom: 1px solid $c-white;
+        padding-bottom: 7px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .labels {
+        color: $c-text-highlighted-2;
+        margin-bottom: 15px;
+
+        .pld {
+            color: $c-gray-4;
+        }
+    }
+
+    .labels,
+    .table-row {
+        font-size: 12px;
+
+        @media (min-width: 1200px) {
+            font-size: 14px;
+        }
+
+        .pos {
+            width: 26px;
+        }
+        .club {
+            padding: 1px 25px 1px 10px;
+        }
+        .pld,
+        .pts {
+            width: 42px;
+        }
+    }
+
+    .table-row {
+        margin-bottom: 1px;
+
+        > div {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+
+        &:first-child {
+            .club {
+                font-weight: 700;
+            }
+        }
+
+        .club {
+            position: relative;
+
+            &.up:after,
+            &.down:after,
+            &.no-rating:after {
+                content: '';
+                display: inline-flex;
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+            &.up:after {
+                border: 5px solid transparent;
+                border-bottom: 7px solid $c-popularity-up;
+                top: 2px;
+            }
+            &.down:after {
+                border: 5px solid transparent;
+                border-top: 7px solid $c-popularity-down;
+                top: 8px;
+            }
+            &.no-rating:after {
+                width: 5px;
+                height: 2px;
+                background: $c-no-rating;
+                top: calc(50% - 1px);
+                right: 12px;
+            }
+        }
+
+        &.teal-blue:first-child {
+            $_classes: pos club pld pts;
+
+            @for $i from 1 through length($_classes) {
+                .#{nth($_classes, $i)} {
+                    background: nth($c-first-row, $i);
+                }
+            }
+        }
+
+        .club,
+        .pld,
+        .pts {
+            margin-left: 1px;
+        }
+
+        &.teal-blue {
+            @include set-league-row-color($c-teal-blue-row);
+        }
+
+        &.gray {
+            @include set-league-row-color($c-gray-row);
+        }
+
+        &.dark-red {
+            @include set-league-row-color($c-dark-red-row);
+        }
+    }
+}

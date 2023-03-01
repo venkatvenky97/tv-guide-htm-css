@@ -1,0 +1,143 @@
+@import '../variables';
+
+#sidebar {
+    width: 270px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -600px;
+    z-index: 9999;
+    transition: left .3s;
+    background: $c-gray-1;
+    box-shadow: 0 0 100px $c-black;
+
+    @media (min-width: 768px) {
+        width: 386px;
+    }
+
+    &.active {
+        left: 0;
+    }
+
+    .sidebar-header {
+        background: $c-gray-6;
+        padding: 25px;
+        @media (min-width: 768px) {
+            padding: 40px;
+        }
+
+        .avatar {
+            span {
+                font-size: 30px;
+                margin-top: 2px;
+
+                @media (min-width: 768px) {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .label,
+        .email {
+            font-size: 14px;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        .email {
+            color: $c-sidenav-user-email;
+        }
+    }
+
+    .log-out {
+        top: 10px;
+        right: 15px;
+        color: $c-accent-2;
+        font-weight: 700;
+        font-size: 13px;
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .content {
+        padding: 30px 40px;
+        @media (min-width: 768px) {
+            padding: 40px 60px;
+        }
+
+        a {
+            color: $c-white;
+        }
+
+        li {
+            &.active {
+                > a {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        ul:not(.sub-nav) > li:nth-child(n+2) {
+            margin-top: 20px;
+        }
+
+        .sub-nav {
+            li {
+                padding-left: 40px;
+                position: relative;
+
+                &:nth-child(n+2) {
+                    margin-top: 10px;
+                }
+
+                &.active:before {
+                    font-family: $f-icons;
+                    content: "\e907";
+                    color: $c-active-sidenav-el;
+                    font-size: 23px;
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                }
+            }
+        }
+
+        .badge {
+            background: $c-accent-2;
+            font-size: 14px;
+            padding: 0 5px;
+            line-height: 26px;
+        }
+    }
+
+    .icon-cog {
+        font-size: 26px;
+    }
+}
+
+#sidenav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    //transition: all 0.5s ease-in-out;
+}
+
+#sidenav-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,72 @@
+@import '../variables';
+
+$c-chips: #555555;
+
+.c-listing-filters {
+    .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 3px 5px 3px 20px;
+        background: $c-chips;
+        border-radius: 50px;
+        color: $c-white;
+        font-size: 12px;
+        min-height: 30px;
+
+        @media (min-width: 1200px) {
+            min-height: 30px;
+            font-size: 14px;
+            padding: 5px 5px 5px 20px;
+        }
+
+        .icon-minus-alt {
+            position: relative;
+            margin-left: 20px;
+            font-size: 20px;
+            color: $c-white;
+            cursor: pointer;
+            transition: color .3s;
+
+            @media (min-width: 1200px) {
+                font-size: 25px;
+                top: 1px;
+            }
+
+            &:hover {
+                color: $c-accent-2;
+            }
+        }
+    }
+}
+
+.popover.listing-filters {
+    border: 0;
+    background: $c-popover-bg;
+    width: 320px;
+    border-radius: 0;
+
+    @include set-popover-arrow-color($c-popover-bg);
+
+    .popover-body {
+        padding: 0;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .c-select {
+        .btn {
+            padding: 9px 15px;
+        }
+    }
+
+    .c-listing-filters {
+        padding: 20px;
+    }
+
+    footer {
+        background: $c-gray-8;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>TVGuide - Show Details</title>
+
+</head>
+<body>
+
+    <div class="page show-details-page">
+
+        <nav id="sidebar" class="text-white">
+
+            <div class="sidebar-header d-flex position-relative">
+                <a href="#" class="log-out position-absolute">log out</a>
+                <div class="avatar mr-3 d-flex align-items-center">
+                    <span class="icon-user-solid-circle"></span>
+                </div>
+                <div>
+                    <div class="label">Logged in as:</div>
+                    <div class="email">francisco@tvguide.co.uk</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="#">TV Guide</a>
+                            <ul class="list-unstyled mt-2 sub-nav">
+                                <li>
+                                    <a href="#">Channels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">VOD</a>
+                                </li>
+                                <li>
+                                    <a href="trending.html">Trending</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="new-on-tv.html">New On TV</a>
+                        </li>
+                        <li>
+                            <a href="new-films.html">New Films</a>
+                        </li>
+                        <li>
+                            <a href="sports.html">Sports</a>
+                        </li>
+                        <li class="active">
+                            <a href="football.html">Football</a>
+                        </li>
+                        <li>
+                            <a href="my-calendar.html" class="d-flex justify-content-between">
+                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-inline-flex align-items-center" data-toggle="modal" data-target="#settings-modal" data-backdrop="static">
+                                <span class="icon-cog mr-3"></span> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+        <div id="page-content">
+
+            <header id="main-header">
+
+                <div class="ad text-center d-none d-sm-block">
+                    <a href="#">
+                        <img class="img-fluid" src="img/banner.jpg">
+                    </a>
+                </div>
+
+                <div class="position-relative d-flex flex-column align-items-center header-content">
+                    <div class="nav-wrapper w-100 nav-wrapper-js">
+                        <div class="container-fluid">
+                            <div class="justify-content-between align-items-start d-none d-xl-flex">
+                                <nav class="nav-a">
+                                    <ul class="list-unstyled d-flex m-0">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/logo.png" alt="TVGuide">
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="tv-listings.html">TV Listings</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-on-tv.html"> New on TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-films.html">New Films</a>
+                                        </li>
+                                        <li>
+                                            <a href="sports.html">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="football.html">Football</a>
+                                        </li>
+                                        <li>
+                                            <a href="my-calendar.html">
+                                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex search align-items-center flex-grow-1 justify-content-end">
+                                    <form class="mr-5 ml-5">
+                                        <input type="search" placeholder="Search for Shows or Films ...">
+                                        <button><span class="icon-search"></span></button>
+                                    </form>
+                                    <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="d-flex d-xl-none justify-content-between align-items-start text-white mobile-nav">
+                                <div class="d-flex">
+                                    <a href="#" class="d-flex align-items-center" >
+                                        <img src="img/logo.png">
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="d-none d-sm-flex search align-items-center flex-grow-1 justify-content-end">
+                                        <form class="mr-4">
+                                            <input type="search" placeholder="Search ...">
+                                            <button><span class="icon-search"></span></button>
+                                        </form>
+                                    </div>
+                                    <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                        <span class="icon-menu"></span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                        <span class="icon-user-solid-circle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-search d-sm-none">
+                        <form action="" class="form-inline my-2 my-lg-0">
+                            <input class="form-control" type="search" placeholder="Search for Shows or Films ..." aria-label="Search for Shows or Films">
+                            <button type="submit">
+                                <span class="icon-search"></span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="details-header text-white w-100" style="background-image: url('img/details/header-bg.jpg');">
+                        <div class="content d-flex justify-content-center flex-column">
+                            <h1 class="mb-2 mb-sm-3 font-weight-bold">
+                                The Lord of the Rings: The Fellowship of the Ring
+                            </h1>
+                            <div class="d-flex align-items-center mb-2 mb-sm-3">
+                                <img class="channel-logo" src="img/channels/four.png" alt="4">
+                                <div class="ml-2">
+                                    <div class="start-time font-weight-bold mb-1">10.00pm Today</div>
+                                    <div class="time-before-start">(35 minutes)</div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                Freeview: 4  Sky: 804 Virgin: 104 BT: 4 Freesat: 104
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+            <section id="details" class="text-white">
+
+                <div>
+                    <div class="row">
+
+                        <div class="col-xl-7">
+                            <div class="d-flex mb-3 mb-sm-4 flex-wrap">
+                                <div class="stars d-flex align-items-center mr-2">
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full"></span>
+                                </div>
+                                <span class="icon-thumbs-up icon-circle mr-1"></span>
+                                <span class="icon-thumbs-down icon-circle mr-3 mr-md-5"></span>
+
+                                <span class="set-alert mr-3 mr-md-5">
+                                    <span class="d-none d-sm-inline">Set Alert:</span>
+                                    <span class="icon-bell icon-circle ml-1"></span>
+                                </span>
+
+                                <span class="watch-on sm">
+                                    <span class="d-none d-sm-inline">Watch on:</span>
+                                    <img class="ml-1" src="img/details/netflix.png" alt="Netflix">
+                                    <img src="img/details/amazon-prime.png" alt="Amazon prime">
+                                </span>
+                            </div>
+
+
+                            <div class="d-flex">
+                                <h4 class="heading mr-2">Season 11 Episode 1</h4>
+                                <h4 class="secondary-heading">“Send Stewie In, Please”</h4>
+                            </div>
+                            <p class="episode-desc mb-3">
+                                In the final episode of the series, mounting pressure from Neil forces Richard to make big decisions without
+                                Karen's knowledge. Arguments over Maggie's future culminate in them realising she is in fact missing,
+                                and clients unexpectedly turning up on the doorstep leaves Richard wondering if maybe he shouldn't have
+                                enjoyed himself quite so much at Ricky's party. Last in the series
+                            </p>
+
+                            <div class="d-flex mb-4 align-items-baseline">
+                                <h4 class="heading mr-3">Category:</h4>
+                                <div>
+                                    <span class="category comedy">comedy</span>
+                                    <span class="category sports">sports</span>
+                                    <span class="category music">music</span>
+                                    <span class="category film">film</span>
+                                    <span class="category soap">soap</span>
+                                    <span class="category kids">kids</span>
+                                    <span class="category drama">drama</span>
+                                    <span class="category talk-show">talk show</span>
+                                    <span class="category game-show">game show</span>
+                                    <span class="category sci-fi">sci-fi</span>
+                                    <span class="category documentary">documentary</span>
+                                    <span class="category motor">motor</span>
+                                    <span class="category horror">horror</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 mb-sm-5 pb-md-2">
+                                <span class="subtitles mr-2">SUBTITLES</span> <span class="audio-described">AUDIO DESCRIBED</span>
+                            </div>
+
+                            <h4 class="heading">Actors:</h4>
+                            <div class="actors mb-4 custom-carousel-arrows">
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-1.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Leonard DiCaprio</div>
+                                    <div class="actor-role">James Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-2.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Dustin Hofman</div>
+                                    <div class="actor-role">Curtis Lee</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-3.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Angelina Jolie</div>
+                                    <div class="actor-role">Jane Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-4.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Gal Gadot</div>
+                                    <div class="actor-role">Katie Mary</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-5.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Cillian Murphy</div>
+                                    <div class="actor-role">Doctor Stewart</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-1.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Leonard DiCaprio</div>
+                                    <div class="actor-role">James Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-2.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Dustin Hofman</div>
+                                    <div class="actor-role">Curtis Lee</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-3.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Angelina Jolie</div>
+                                    <div class="actor-role">Jane Smith</div>
+                                </div>
+                            </div>
+
+                            <h4 class="heading">Crew:</h4>
+                            <div class="actors mb-4 custom-carousel-arrows mb-5">
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-1.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Leonard DiCaprio</div>
+                                    <div class="actor-role">James Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-2.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Dustin Hofman</div>
+                                    <div class="actor-role">Curtis Lee</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-3.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Angelina Jolie</div>
+                                    <div class="actor-role">Jane Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-4.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Gal Gadot</div>
+                                    <div class="actor-role">Katie Mary</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-5.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Cillian Murphy</div>
+                                    <div class="actor-role">Doctor Stewart</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-1.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Leonard DiCaprio</div>
+                                    <div class="actor-role">James Smith</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-2.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Dustin Hofman</div>
+                                    <div class="actor-role">Curtis Lee</div>
+                                </div>
+                                <div class="slick-item text-center">
+                                    <div class="d-flex align-items-center justify-content-center mb-2">
+                                        <img src="img/details/actor-3.png" alt="">
+                                    </div>
+                                    <div class="actor-name">Angelina Jolie</div>
+                                    <div class="actor-role">Jane Smith</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-3 mb-sm-5 flex-wrap">
+                                <div class="mb-4 mb-md-0 mr-5 pr-5 mb-xl-4 watch-on lg">
+                                    <h4 class="heading">Watch On:</h4>
+                                    <div>
+                                        <img src="img/details/netflix.png" alt="Netflix">
+                                        <img src="img/details/amazon-prime.png" alt="Amazon prime" class="ml-2">
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="heading">Rating:</h4>
+                                    <div class="d-flex flex-wrap">
+                                        <div class="rating d-flex flex-column align-items-center mr-4 mb-2 mb-sm-0">
+                                            <div class="score d-flex align-items-center justify-content-center">7.9</div>
+                                            <span class="label mt-2">TVGuide.co.uk</span>
+                                        </div>
+                                        <div class="rating d-flex flex-column align-items-center mr-4 pr-2 mb-2 mb-sm-0">
+                                            <div class="score d-flex align-items-center justify-content-center">7.6</div>
+                                            <span class="label mt-2">IMDB</span>
+                                        </div>
+                                        <div class="rating d-flex flex-column align-items-center">
+                                            <div class="tomatoes d-flex align-items-center justify-content-center">
+                                                <div class="mr-3 d-flex flex-column align-items-center">
+                                                    <div class="mb-1 d-flex align-items-center">
+                                                        <img src="img/details/rotten-tomattoes.svg" alt="">
+                                                        <span class="percentage ml-1">70</span>
+                                                    </div>
+                                                    <div class="type text-uppercase font-weight-bold">TOMATOMETER</div>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <div class="mb-1 d-flex align-items-center">
+                                                        <img src="img/details/positive_audience.svg" alt="">
+                                                        <span class="percentage ml-1">87</span>
+                                                    </div>
+                                                    <div class="type text-uppercase font-weight-bold">AUDIENCE SCORE</div>
+                                                </div>
+                                            </div>
+                                            <span class="label mt-2">Rotten Tomatoes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="series-guide d-xl-none mb-5">
+                                <h4 class="heading mb-3">Series Guide:</h4>
+
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <div class="c-card text-white d-flex flex-column justify-content-between">
+                                        <div class="col p-0 d-flex justify-content-between align-items-start">
+                                            <div class="logo">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                    <span class="ml-2 date">6.00pm<br>Today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="desc col d-flex justify-content-end flex-column pb-2">
+                                            <h6 class="title font-weight-bold">
+                                                Pilot
+                                            </h6>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="sub-title">S1 E8</div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rating d-flex up mr-2">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div class="down popularity">Popularity: 62556</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ml-sm-3 mt-2 mt-sm-0">
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Language:</h5>
+                                            <div class="guide-info">
+                                                English, English [Audio Description]
+                                            </div>
+                                        </div>
+                                       <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                           <h5 class="guide-heading mr-2">Runtime:</h5>
+                                           <div class="guide-info">
+                                               1 hour, 4 minutes
+                                           </div>
+                                       </div>
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Release date:</h5>
+                                            <div class="guide-info">
+                                                31 August 2018
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mt-sm-3 episode-description">
+                                            In the series premiere, CIA analyst Jack Ryan uncovers a series of suspicious
+                                            transactions that take him and his boss James Greer out from behind their desks
+                                            into the field to hunt down a powerful new threat to the world. Hanin begins to
+                                            question her husband's affairs after he brings a mysterious outsider into their home.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <div class="c-card text-white d-flex flex-column justify-content-between">
+                                        <div class="col p-0 d-flex justify-content-between align-items-start">
+                                            <div class="logo">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                    <span class="ml-2 date">6.00pm<br>Today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="desc col d-flex justify-content-end flex-column pb-2">
+                                            <h6 class="title font-weight-bold">
+                                                Pilot
+                                            </h6>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="sub-title">S1 E8</div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rating d-flex up mr-2">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div class="down popularity">Popularity: 62556</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ml-sm-3 mt-2 mt-sm-0">
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Language:</h5>
+                                            <div class="guide-info">
+                                                English, English [Audio Description]
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Runtime:</h5>
+                                            <div class="guide-info">
+                                                1 hour, 4 minutes
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Release date:</h5>
+                                            <div class="guide-info">
+                                                31 August 2018
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mt-sm-3 episode-description">
+                                            In the series premiere, CIA analyst Jack Ryan uncovers a series of suspicious
+                                            transactions that take him and his boss James Greer out from behind their desks
+                                            into the field to hunt down a powerful new threat to the world. Hanin begins to
+                                            question her husband's affairs after he brings a mysterious outsider into their home.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+
+                                <div class="d-flex flex-column flex-sm-row">
+                                    <div class="c-card text-white d-flex flex-column justify-content-between">
+                                        <div class="col p-0 d-flex justify-content-between align-items-start">
+                                            <div class="logo">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                    <span class="ml-2 date">6.00pm<br>Today</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="desc col d-flex justify-content-end flex-column pb-2">
+                                            <h6 class="title font-weight-bold">
+                                                Pilot
+                                            </h6>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="sub-title">S1 E8</div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="rating d-flex up mr-2">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div class="down popularity">Popularity: 62556</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ml-sm-3 mt-2 mt-sm-0">
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Language:</h5>
+                                            <div class="guide-info">
+                                                English, English [Audio Description]
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Runtime:</h5>
+                                            <div class="guide-info">
+                                                1 hour, 4 minutes
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-baseline mb-1 mb-sm-0">
+                                            <h5 class="guide-heading mr-2">Release date:</h5>
+                                            <div class="guide-info">
+                                                31 August 2018
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mt-sm-3 episode-description">
+                                            In the series premiere, CIA analyst Jack Ryan uncovers a series of suspicious
+                                            transactions that take him and his boss James Greer out from behind their desks
+                                            into the field to hunt down a powerful new threat to the world. Hanin begins to
+                                            question her husband's affairs after he brings a mysterious outsider into their home.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="divider"></div>
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="complete-series-guide font-weight-bold">Show Complete Series Guide</a>
+                                </div>
+                            </div>
+
+                            <div class="add-review mb-4">
+                                <h4 class="heading">TVGuide.co.uk User Reviews:</h4>
+                                <form action="" class="d-flex">
+                                    <input type="text" placeholder="Add your review:" class="flex-grow-1">
+                                    <button type="submit" class="text-uppercase ml-2">Post</button>
+                                </form>
+                            </div>
+
+                            <div class="reviews mb-4">
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">Agatha</div>
+                                    <p class="comment m-0">
+                                        For Dr Yuhana Younis who stood up so calmly and resolutely to the furious man demanding sick notes instead if working.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">dontbelieveallyouread</div>
+                                    <p class="comment m-0">
+                                        Thanks for that. My fault for putting the kettle on too soon!
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">10:47pm Thu 15 Feb</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">mrwhistle</div>
+                                    <p class="comment m-0">
+                                        They tell you at the end of the programme.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:00pm Thu 15 Feb</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">jackdaniel</div>
+                                    <p class="comment m-0">
+                                        Only wish we got feed back about some the problems.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">sarah tyson</div>
+                                    <p class="comment m-0">
+                                        This is an awesome show keep them coming. It's informative and excellent.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="more-comments font-weight-bold">Show more</a>
+                            </div>
+
+                        </div><!-- .col-lg-7 -->
+
+                        <aside class="d-none d-xl-block col-xl-5 series-guide pl-5 mb-xl-4 pr-0">
+                            <h4 class="heading mb-3">Series Guide:</h4>
+
+                            <div class="d-flex">
+                                <div class="c-card text-white d-flex flex-column justify-content-between">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column pb-2">
+                                        <h6 class="title font-weight-bold">
+                                            Pilot
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ml-3">
+                                    <h5 class="guide-heading">Language:</h5>
+                                    <div class="guide-info mb-3">
+                                        English, English [Audio Description]
+                                    </div>
+                                    <h5 class="guide-heading">Runtime:</h5>
+                                    <div class="guide-info mb-3">
+                                        1 hour, 4 minutes
+                                    </div>
+                                    <h5 class="guide-heading">Release date:</h5>
+                                    <div class="guide-info">
+                                        31 August 2018
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3 episode-description">
+                                In the series premiere, CIA analyst Jack Ryan uncovers a series of suspicious
+                                transactions that take him and his boss James Greer out from behind their desks
+                                into the field to hunt down a powerful new threat to the world. Hanin begins to
+                                question her husband's affairs after he brings a mysterious outsider into their home.
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <div class="card">
+                                        <div class="content d-flex flex-column flex-fill">
+                                            <div class="col p-0">
+                                                <span class="score">5.6</span>
+                                            </div>
+                                            <div class="col p-0 d-flex flex-column justify-content-end">
+                                                <h5 class="episode mb-1">Episode 2</h5>
+                                                <h4 class="m-0 title">French Connection</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="guide-heading">Language:</h5>
+                                    <div class="guide-info mb-3">
+                                        English, English [Audio Description]
+                                    </div>
+
+                                    <h5 class="guide-heading">Runtime:</h5>
+                                    <div class="guide-info mb-3">
+                                        1 hour, 4 minutes
+                                    </div>
+
+                                    <h5 class="guide-heading">Release date:</h5>
+                                    <div class="guide-info mb-3">
+                                        31 August 2018
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3 episode-description">
+                                Jack and Greer decode a fresh piece of intel that takes them to Paris and one
+                                step closer to the elusive Suleiman. Hanin's husband returns home with a renewed
+                                fervor for his secretive mission, leaving her unsure of their family's future.
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <div class="card">
+                                        <div class="content d-flex flex-column flex-fill">
+                                            <div class="col p-0">
+                                                <span class="score">5.6</span>
+                                            </div>
+                                            <div class="col p-0 d-flex flex-column justify-content-end">
+                                                <h5 class="episode mb-1">Episode 2</h5>
+                                                <h4 class="m-0 title">French Connection</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="guide-heading">Language:</h5>
+                                    <div class="guide-info mb-3">
+                                        English, English [Audio Description]
+                                    </div>
+
+                                    <h5 class="guide-heading">Runtime:</h5>
+                                    <div class="guide-info mb-3">
+                                        1 hour, 4 minutes
+                                    </div>
+
+                                    <h5 class="guide-heading">Release date:</h5>
+                                    <div class="guide-info mb-3">
+                                        31 August 2018
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3 episode-description">
+                                Jack and Greer decode a fresh piece of intel that takes them to Paris and one
+                                step closer to the elusive Suleiman. Hanin's husband returns home with a renewed
+                                fervor for his secretive mission, leaving her unsure of their family's future.
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <div class="card">
+                                        <div class="content d-flex flex-column flex-fill">
+                                            <div class="col p-0">
+                                                <span class="score">5.6</span>
+                                            </div>
+                                            <div class="col p-0 d-flex flex-column justify-content-end">
+                                                <h5 class="episode mb-1">Episode 2</h5>
+                                                <h4 class="m-0 title">French Connection</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="guide-heading">Language:</h5>
+                                    <div class="guide-info mb-3">
+                                        English, English [Audio Description]
+                                    </div>
+
+                                    <h5 class="guide-heading">Runtime:</h5>
+                                    <div class="guide-info mb-3">
+                                        1 hour, 4 minutes
+                                    </div>
+
+                                    <h5 class="guide-heading">Release date:</h5>
+                                    <div class="guide-info mb-3">
+                                        31 August 2018
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3 episode-description">
+                                Jack and Greer decode a fresh piece of intel that takes them to Paris and one
+                                step closer to the elusive Suleiman. Hanin's husband returns home with a renewed
+                                fervor for his secretive mission, leaving her unsure of their family's future.
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="row">
+                                <div class="col-6 pr-0">
+                                    <div class="card">
+                                        <div class="content d-flex flex-column flex-fill">
+                                            <div class="col p-0">
+                                                <span class="score">5.6</span>
+                                            </div>
+                                            <div class="col p-0 d-flex flex-column justify-content-end">
+                                                <h5 class="episode mb-1">Episode 2</h5>
+                                                <h4 class="m-0 title">French Connection</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="guide-heading">Language:</h5>
+                                    <div class="guide-info mb-3">
+                                        English, English [Audio Description]
+                                    </div>
+
+                                    <h5 class="guide-heading">Runtime:</h5>
+                                    <div class="guide-info mb-3">
+                                        1 hour, 4 minutes
+                                    </div>
+
+                                    <h5 class="guide-heading">Release date:</h5>
+                                    <div class="guide-info mb-3">
+                                        31 August 2018
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="mt-3 episode-description">
+                                Jack and Greer decode a fresh piece of intel that takes them to Paris and one
+                                step closer to the elusive Suleiman. Hanin's husband returns home with a renewed
+                                fervor for his secretive mission, leaving her unsure of their family's future.
+                            </div>
+                        </aside><!-- .col-lg-5 -->
+                    </div> <!-- .row -->
+                </div>
+
+            </section>
+
+            <footer id="main-footer">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                        <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                    </div>
+                    <div class="content d-flex align-items-center flex-column align-items-md-start">
+                        <nav>
+                            <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manage consent</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="copyright text-center text-sm-left">
+                            © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                            <a href="#">Now in 50 Countries!</a>
+                        </div>
+                        <div>
+                            <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                            <form action="">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="text-uppercase">Go</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row align-items-center">
+                            <div class="social mr-sm-5 mb-3 mb-sm-0">
+                                <a href="#" class="facebook mr-2">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                                <a href="#" class="twitter mr-2">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                                <a href="#" class="linkedin mr-2">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                                <a href="#" class="snapchat">
+                                    <span class="icon-snapchat-ghost"></span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="mr-1">
+                                    <img src="img/google-play.svg" alt="Get it on Google Play">
+                                </a>
+                                <a href="#">
+                                    <img src="img/app-store.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="sidenav-overlay"></div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script src="js/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initSidenav();
+
+        $('#details .actors').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            draggable: false,
+            touchMove: false,
+            centerMode: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
+            //variableWidth: true
+        });
+
+    });
+
+    function initSidenav() {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

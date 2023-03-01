@@ -1,0 +1,249 @@
+@import '../variables';
+
+#settings-modal {
+
+    .c-select {
+        width: 200px;
+    }
+
+    .modal-dialog {
+        max-width: 260px;
+        padding-bottom: 70px;
+
+        @media (min-width: 576px) {
+            max-width: 480px;
+        }
+
+        @media (min-width: 992px) {
+            max-width: 872px;
+        }
+
+        @media (min-width: 1200px) {
+            padding-bottom: 0;
+        }
+    }
+
+    .modal-content {
+        padding-top: 60px;
+
+        @media (min-width: 1200px) {
+            padding-top: 250px;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0;
+
+        @media (min-width: 576px) {
+            font-size: 36px;
+        }
+    }
+
+    h3 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+
+        @media (min-width: 576px) {
+            font-size: 21px;
+        }
+    }
+
+    .add-channel {
+        input {
+            border: 0;
+            border-bottom: 2px solid $c-white;
+            background: 0;
+            max-width: 100%;
+            width: 100%;
+            font-size: 14px;
+            color: $c-white;
+            &:focus {
+                outline: none;
+            }
+
+            @media (min-width: 576px) {
+                font-size: 16px;
+            }
+        }
+
+        ul {
+            font-size: 14px;
+            @media (min-width: 576px) {
+                font-size: 21px;
+            }
+
+            img {
+                width: 45px;
+                @media (min-width: 576px) {
+                    width: 60px;
+                }
+            }
+        }
+
+        .icon-search {
+            font-size: 30px;
+        }
+
+        .icon-plus {
+            font-size: 26px;
+            transition: .25s;
+            cursor: pointer;
+
+            &:hover {
+                color: $c-accent-2;
+            }
+        }
+
+        mark {
+            background: 0;
+            color: $c-text-highlighted;
+            padding: 0;
+        }
+    }
+
+    footer {
+        background: $c-gray-8;
+        padding: 12px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        @media (min-width: 576px) {
+            padding: 20px;
+        }
+    }
+
+}
+
+.modal-content {
+    background: 0;
+    border: 0;
+}
+
+.modal-backdrop {
+    background-color: $c-modal-bg;
+
+    &.show {
+        opacity: 1;
+        @media (min-width: 1200px) {
+            opacity: .9;
+        }
+    }
+}
+
+.draggable-mirror {
+    z-index: 2000;
+}
+
+.alert.settings-modal {
+    color: $c-white;
+    padding: 0 30px 0 0;
+    outline: none;
+    border-radius: 0;
+
+    @media (min-width: 576px) {
+        padding-right: 45px;
+    }
+
+    &[class*='--is-dragging'] {
+        border: 1px solid $c-accent-2;
+    }
+
+    &.draggable-mirror {
+        //border: 1px solid red;
+    }
+
+    .number {
+        font-size: 10px;
+        @media (min-width: 576px) {
+            font-size: 14px;
+        }
+    }
+
+    img {
+        width: 34px;
+        @media (min-width: 576px) {
+            width: 60px;
+        }
+    }
+
+    .name {
+        font-size: 12px;
+
+        @media (min-width: 576px) {
+            font-size: 21px;
+        }
+    }
+
+    .drag-area {
+        height: 30px;
+        width: 22px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            background: $c-gray-7;
+            height: 2px;
+            width: 100%;
+            position: relative;
+            display: block;
+
+            @media (min-width: 576px) {
+                height: 3px;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                width: 22px;
+                height: 2px;
+                background: $c-gray-7;
+                position: absolute;
+                @media (min-width: 576px) {
+                    height: 3px;
+                }
+            }
+
+            &:before {
+                top: -6px;
+                @media (min-width: 576px) {
+                    top: -8px;
+                }
+            }
+
+            &:after {
+                top: 6px;
+                @media (min-width: 576px) {
+                    top: 8px;
+                }
+            }
+        }
+    }
+
+    .icon-close {
+        color: red;
+        font-size: 24px;
+        @media (min-width: 576px) {
+            font-size: 30px;
+        }
+    }
+
+    button.close {
+        padding: 0;
+        text-shadow: none;
+        opacity: 1;
+        top: 3px;
+        @media (min-width: 576px) {
+            top: 0;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

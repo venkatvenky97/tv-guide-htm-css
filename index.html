@@ -1,0 +1,1841 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,800" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>TVGuide</title>
+
+</head>
+<body>
+
+    <div class="page home-page">
+
+        <nav id="sidebar" class="text-white">
+
+            <div class="sidebar-header d-flex position-relative">
+                <a href="#" class="log-out position-absolute">log out</a>
+                <div class="avatar mr-3 d-flex align-items-center">
+                    <span class="icon-user-solid-circle"></span>
+                </div>
+                <div>
+                    <div class="label">Logged in as:</div>
+                    <div class="email">francisco@tvguide.co.uk</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="#">TV Guide</a>
+                            <ul class="list-unstyled mt-2 sub-nav">
+                                <li class="active">
+                                    <a href="#">Channels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">VOD</a>
+                                </li>
+                                <li>
+                                    <a href="trending.html">Trending</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="new-on-tv.html">New On TV</a>
+                        </li>
+                        <li>
+                            <a href="new-films.html">New Films</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="d-inline-flex align-items-center" data-toggle="modal" data-target="#settings-modal" data-backdrop="static">
+                                <span class="icon-cog mr-3"></span> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+        <div id="page-content">
+
+            <header id="main-header">
+
+                <div class="ad text-center d-none d-sm-block">
+                    <a href="#">
+                        <img class="img-fluid" src="img/banner.jpg">
+                    </a>
+                </div>
+
+                <div class="position-relative d-flex flex-column align-items-center header-content">
+                    <div class="nav-wrapper w-100 nav-wrapper-js">
+                        <div class="container-fluid">
+                            <div class="justify-content-between align-items-start d-none d-xl-flex">
+                                <nav class="nav-a">
+                                    <ul class="list-unstyled d-flex m-0">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/logo.png" alt="TVGuide">
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="tv-listings.html">TV Listings</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-on-tv.html"> New on TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-films.html">New Films</a>
+                                        </li>
+                                        <li>
+                                            <a href="sports.html">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="football.html">Football</a>
+                                        </li>
+                                        <li>
+                                            <a href="my-calendar.html">
+                                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+                                    <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="d-flex d-xl-none justify-content-between align-items-center align-items-xl-start text-white mobile-nav">
+                                <div class="d-flex">
+                                    <a href="#" class="d-flex align-items-center" >
+                                        <img src="img/logo.png">
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                        <span class="icon-menu"></span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                        <span class="icon-user-solid-circle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="active-item active-episode-js d-flex" style="background-image: url('img/bg.jpg');">
+                        <div class="bg-layer"></div>
+                        <div class="container-fluid d-flex justify-content-end flex-column">
+                            <h1 class="text-white title">Doctor Who</h1>
+                            <div class="d-flex align-items-start">
+                                <img src="img/channels/bbc-one.png" class="mr-2 mr-sm-3 channel-logo">
+                                <div class="text-white">
+                                    <div class="start-time font-weight-bold">9.00pm Tomorrow</div>
+                                    <div class="episode">Season 11 Episode 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <nav class="nav-b align-items-center">
+                <div class="container-fluid d-flex justify-content-center justify-content-md-between">
+                    <ul class="list-unstyled m-0 d-none d-md-flex">
+                        <li class="active">
+                            <a href="index.html">Channel</a>
+                        </li>
+                        <li>
+                            <a href="genre.html">Genre</a>
+                        </li>
+                        <li>
+                            <a href="vod.html">VOD</a>
+                        </li>
+                        <li>
+                            <a href="trending.html">Trending</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-search d-flex align-items-center">
+                        <form action="" class="form-inline my-2 my-lg-0">
+                            <input class="form-control" type="search" placeholder="Search for Shows or Films ..." aria-label="Search for Shows or Films">
+                            <button type="submit">
+                                <span class="icon-search"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="grid-menu" class="text-white d-flex align-items-center">
+                <div class="container-fluid d-flex justify-content-between w-100 h-100">
+                    <ul class="list-unstyled d-flex m-0 nav">
+                        <li class="d-flex">
+                            <a data-toggle="modal" data-target="#settings-modal" data-backdrop="static" class="d-inline-flex">
+                                <span class="icon-cog"></span>
+                            </a>
+                        </li>
+                        <li class="dropdown ml-3 ml-md-5">
+                            <a class="dropdown-toggle" href="#" role="button" id="todayMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Today <span class="ml-2 icon-chevron-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="todayMenu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" role="button" id="nowMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Now <span class="ml-2 icon-chevron-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="nowMenu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="dropdown d-none d-md-flex">
+                            <a class="dropdown-toggle" href="#" role="button" id="genreMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Genre <span class="ml-2 icon-chevron-down"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="genreMenu">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="d-none d-xl-flex ml-md-3">
+                            <form action="">
+                                <label class="m-0 d-flex align-items-center">
+                                    Find Channel
+                                    <input type="text" class="text-white ml-2">
+                                    <button type="submit">
+                                        <span class="icon-search text-white"></span>
+                                    </button>
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="right d-inline-flex align-items-center">
+                        <span class="date-js d-none d-md-inline date"></span>
+                        <a href="index-b.html" class="ml-5 layout-btn">
+                            <img src="img/header/icon-view-a.svg">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-0">
+                <div id="time-bar" class="time-bar-js text-white d-flex align-items-center">
+                    <div>12:00 AM</div>
+                    <div>12:30 AM</div>
+                    <div>1:00 AM</div>
+                    <div>1:30 AM</div>
+                    <div>2:00 AM</div>
+                    <div>2:30 AM</div>
+                    <div>3:00 AM</div>
+                    <div>3:30 AM</div>
+                    <div>4:00 AM</div>
+                    <div>4:30 AM</div>
+                    <div>5:00 AM</div>
+                    <div>5:30 AM</div>
+                    <div>6:00 AM</div>
+                    <div>6:30 AM</div>
+                    <div>7:00 AM</div>
+                    <div>7:30 AM</div>
+                    <div>8:00 AM</div>
+                    <div>8:30 AM</div>
+                    <div>9:00 AM</div>
+                    <div>9:30 AM</div>
+                    <div>10:00 AM</div>
+                    <div>10:30 AM</div>
+                    <div>11:00 AM</div>
+                    <div>11:30 AM</div>
+
+                    <div>12:00 PM</div>
+                    <div>12:30 PM</div>
+                    <div>1:00 PM</div>
+                    <div>1:30 PM</div>
+                    <div>2:00 PM</div>
+                    <div>2:30 PM</div>
+                    <div>3:00 PM</div>
+                    <div>3:30 PM</div>
+                    <div>4:00 PM</div>
+                    <div>4:30 PM</div>
+                    <div>5:00 PM</div>
+                    <div>5:30 PM</div>
+                    <div>6:00 PM</div>
+                    <div>6:30 PM</div>
+                    <div>7:00 PM</div>
+                    <div>7:30 PM</div>
+                    <div>8:00 PM</div>
+                    <div>8:30 PM</div>
+                    <div>9:00 PM</div>
+                    <div>9:30 PM</div>
+                    <div>10:00 PM</div>
+                    <div>10:30 PM</div>
+                    <div>11:00 PM</div>
+                    <div>11:30 PM</div>
+                </div>
+
+                <section id="grid" class="d-flex">
+                    <div class="pt-3 rows" id="grid-js">
+                        <div class="time-line"></div>
+
+                        <div class="grid-row d-flex special-channel">
+                            <div class="channel-info special d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/channels/blaze.png" alt="Blaze">
+                                <div class="caption">FREEVIEW 63</div>
+                            </div>
+                            <div class="position-relative wrapper">
+                                <div class="channel-title text-uppercase">Swamp people</div>
+                                <div class="row mb-0">
+                                    <div class="col d-flex">
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card lg">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="grid-item" tabindex="0">
+                                            <div class="c-card">
+                                                <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                    <div class="rating d-none d-sm-block">
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full filled"></span>
+                                                        <span class="icon-star-full"></span>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                        <h5>The Bodyguard</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="channel-secondary-title text-uppercase">Tomorrow 10PM</div>
+                            </div>
+                        </div>
+                        <div class="grid-row d-flex">
+                            <div class="channel-info d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                <div class="caption">102</div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row d-flex">
+                            <div class="channel-info d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/channels/itv.png" alt="ITV">
+                                <div class="caption">103</div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row d-flex">
+                            <div class="channel-info d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/channels/four.png" alt="Four">
+                                <div class="caption">104</div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row d-flex">
+                            <div class="channel-info d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/channels/five.png" alt="Five">
+                                <div class="caption">105</div>
+                            </div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a class="grid-item" tabindex="0">
+                                        <div class="c-card">
+                                            <div class="c-card-content d-flex flex-column justify-content-end justify-content-sm-between">
+                                                <div class="rating d-none d-sm-block">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div>
+                                                    <h6 class="d-none d-sm-block">S1 E3 “The Bomb”</h6>
+                                                    <h5>The Bodyguard</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row d-flex">
+                            <div class="channel-info d-flex justify-content-center">
+                                <div class="caption ad m-0 d-flex align-items-center">
+                                    Advertisement
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <a href="#" class="ad">
+                                        <img src="img/banner.jpg" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid-row d-flex text-white suggested-channels">
+                            <div class="channel-info"></div>
+
+                            <div class="row py-3 pl-2 mb-0">
+                                <div class="col">
+                                    <h5 class="mb-2">Suggested Channels <span>(click to add)</span></h5>
+
+                                    <div class="d-flex mb-1">
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+
+                                        <a class="channel d-inline-flex align-items-center">
+                                            <div class="logo">
+                                                <img src="img/channels/cbs-drama.png" alt="">
+                                            </div>
+                                            <span class="icon-add col p-0 text-center"></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="dropup d-inline-flex">
+                                        <a class="dropdown-toggle text-white quick-add d-inline-flex align-items-center"
+                                           href="#" role="button" id="quick-suggested-channel"
+                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Quick add <span class="icon-chevron-down d-inline-flex ml-1"></span>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="quick-suggested-channel">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .rows -->
+                </section>
+
+            </div>
+
+            <footer id="main-footer">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                        <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                    </div>
+                    <div class="content d-flex align-items-center flex-column align-items-md-start">
+                        <nav>
+                            <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manage consent</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="copyright text-center text-sm-left">
+                            © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                            <a href="#">Now in 50 Countries!</a>
+                        </div>
+                        <div>
+                            <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                            <form action="">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="text-uppercase">Go</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row align-items-center">
+                            <div class="social mr-sm-5 mb-3 mb-sm-0">
+                                <a href="#" class="facebook mr-2">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                                <a href="#" class="twitter mr-2">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                                <a href="#" class="linkedin mr-2">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                                <a href="#" class="snapchat">
+                                    <span class="icon-snapchat-ghost"></span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="mr-1">
+                                    <img src="img/google-play.svg" alt="Get it on Google Play">
+                                </a>
+                                <a href="#">
+                                    <img src="img/app-store.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="sidenav-overlay"></div>
+    </div>
+
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settings-modal" tabindex="-1" role="dialog" aria-labelledby="settings-modal" aria-hidden="true">
+        <div class="modal-dialog mx-auto" role="document">
+            <div class="modal-content text-white">
+                <div class="d-flex justify-content-between mb-4 pb-2">
+                    <h2>Customise Channels</h2>
+                    <div class="d-none d-xl-block">
+                        <button data-dismiss="modal" class="c-button s-sm s-md-xs mr-4 muted">
+                            Cancel
+                        </button>
+                        <button class="c-button s-sm s-md-xs success font-weight-bold">
+                            Done
+                        </button>
+                    </div>
+                </div>
+                <div class="d-flex mb-5 align-items-lg-center flex-column flex-lg-row">
+                    <h3 class="mb-3 mb-lg-0">Select Provider and Region</h3>
+                    <div class="d-flex flex-fill ml-lg-4">
+                        <div class="c-select mr-4">
+                            <select>
+                                <option selected>Freeview</option>
+                                <option value="1">Placeholder</option>
+                                <option value="2">Placeholder</option>
+                            </select>
+                            <div class="outline"></div>
+                        </div>
+                        <div class="c-select">
+                            <select>
+                                <option selected>London</option>
+                                <option value="1">Placeholder</option>
+                                <option value="2">Placeholder</option>
+                            </select>
+                            <div class="outline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row flex-lg-row-reverse flex-column flex-lg-row">
+                    <div class="col-lg add-channel mb-4 mb-lg-0 pl-lg-5">
+                        <h3 class="mb-0 mb-sm-2">Add Channel</h3>
+                        <div>
+                            <div class="d-flex mb-3 mb-sm-4">
+                                <input type="search" id="channels-search-js">
+                                <span class="icon-search ml-md-3"></span>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2 mb-sm-3 d-flex justify-content-between align-items-center">
+                                    <div class="flex-fill">
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="ml-2 text">BBC One</span>
+                                    </div>
+                                    <span class="icon-plus"></span>
+                                </li>
+                                <li class="mb-2 mb-sm-3 d-flex justify-content-between align-items-center">
+                                    <div class="flex-fill">
+                                        <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                        <span class="ml-2 text">BBC Two</span>
+                                    </div>
+                                    <span class="icon-plus"></span>
+                                </li>
+                                <li class="mb-2 mb-sm-3 d-flex justify-content-between align-items-center">
+                                    <div class="flex-fill">
+                                        <img src="img/channels/the_blaze.png" alt="The blaze">
+                                        <span class="ml-2 text">The blaze</span>
+                                    </div>
+                                    <span class="icon-plus"></span>
+                                </li>
+                                <li class="mb-2 mb-sm-3 d-flex justify-content-between align-items-center">
+                                    <div class="flex-fill">
+                                        <img src="img/channels/itv_be.png" alt="ITV be">
+                                        <span class="ml-2 text">ITV be</span>
+                                    </div>
+                                    <span class="icon-plus"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <h3 class="mb-3">Your Channels</h3>
+                        <div class="channels position-relative" id="channels">
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">101</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC One (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">102</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">BBC Two (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="alert alert-dismissible fade show draggable settings-modal" role="alert">
+                                <div class="channel d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <span class="number mr-2">103</span>
+                                        <img src="img/channels/bbc-one.png" alt="BBC One">
+                                        <span class="name ml-3">ITV (London)</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div class="drag-area">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="d-flex justify-content-end d-xl-none">
+            <div class="d-flex flex-fill flex-sm-grow-0">
+                <button data-dismiss="modal" class="c-button s-sm s-md-xs mr-3 mr-sm-4 muted flex-fill">
+                    Cancel
+                </button>
+                <button class="c-button s-sm s-md-xs success font-weight-bold flex-fill">
+                    Done
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Log in Modal -->
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modal" aria-hidden="true">
+        <div class="modal-dialog mx-auto" role="document">
+            <div class="modal-content text-white px-4 px-sm-0">
+                <div class="d-flex justify-content-between mb-4">
+                    <h2 class="mb-0">Log In</h2>
+                    <a class="c-button s-sm s-md-xs muted" data-dismiss="modal">Cancel</a>
+                </div>
+                <h4 class="mb-4">
+                    Don’t have an account? <a class="sign-up-link font-weight-bold">Sign up here</a>
+                </h4>
+                <form action="" class="d-flex flex-column flex-lg-row">
+                    <div class="col-lg-7 p-0 mb-5 mb-lg-0">
+                        <div class="input-group flex-column mb-4">
+                            <label for="sign-in-field" class="m-0">Email</label>
+                            <input type="email" id="sign-in-field" required name="email">
+                        </div>
+                        <div class="input-group flex-column">
+                            <label for="password-field" class="m-0">Password</label>
+                            <input type="password" id="password-field" required name="password">
+                        </div>
+                        <div class="d-none d-xl-flex justify-content-end">
+                            <button class="c-button s-md success font-weight-bold mt-4">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg d-flex flex-column buttons">
+                        <button class="c-button s-md success mb-4 font-weight-bold d-inline-flex d-xl-none">
+                            Login
+                        </button>
+                        <h4 class="font-weight-bold mb-4 text-lg-center">
+                            Or, connect with Facebook
+                        </h4>
+                        <a class="c-button s-md facebook">
+                            <span class="icon-facebook"></span> Facebook
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign up Modal -->
+    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modal" aria-hidden="true">
+        <div class="modal-dialog mx-auto" role="document">
+            <div class="modal-content text-white px-4 px-sm-0">
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                    <h2 class="m-0">Sign Up</h2>
+                    <a class="c-button s-sm s-md-xs muted" data-dismiss="modal">
+                        Cancel
+                    </a>
+                </div>
+                <h4 class="mb-4">Already have an account? <a class="login-in-link font-weight-bold">Log in here</a></h4>
+                <form action="" class="d-flex flex-column flex-lg-row">
+                    <div class="col-lg-7 p-0 mb-4 mb-lg-0">
+                        <div class="input-group flex-column mb-3">
+                            <label class="font-weight-bold m-0">Username</label>
+                            <input type="text">
+                        </div>
+                        <div class="input-group flex-column mb-3">
+                            <label class="font-weight-bold m-0">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="input-group flex-column mb-4 mb-sm-5">
+                            <label class="font-weight-bold m-0">Password</label>
+                            <input type="password">
+                        </div>
+                        <div class="mb-4 mb-sm-5 d-flex justify-content-between">
+                            <div class="d-flex flex-column birthdate justify-content-between">
+                                <div class="font-weight-bold checkbox-label mb-1">Birthdate</div>
+                                <div class="d-flex">
+                                    <input type="text" class="day mr-3 text-center" placeholder="dd">
+                                    <input type="text" class="month mr-3 text-center" placeholder="mm">
+                                    <input type="text" class="year text-center" placeholder="yyyy">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gender justify-content-between">
+                                <div class="font-weight-bold mb-1 checkbox-label">Gender</div>
+                                <div class="d-flex">
+                                    <div class="input-group checkbox mr-2 mr-sm-0">
+                                        <label class="m-0">
+                                            <span class="d-sm-none">F</span>
+                                            <span class="d-none d-sm-inline">Female</span>
+                                            <input type="checkbox">
+                                            <span class="icon"></span>
+                                        </label>
+                                    </div>
+                                    <div class="input-group checkbox justify-content-end">
+                                        <label class="m-0">
+                                            <span class="d-sm-none">M</span>
+                                            <span class="d-none d-sm-inline">Male</span>
+                                            <input type="checkbox">
+                                            <span class="icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-2 mb-sm-3">Select Provider and Region</h4>
+                        <div class="d-flex justify-content-between mb-4 mb-sm-5">
+                            <div class="c-select mr-3 mr-sm-0">
+                                <select>
+                                    <option selected value="1">Freeview</option>
+                                    <option value="2">Test 1</option>
+                                    <option value="3">Test 2</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="c-select">
+                                <select>
+                                    <option selected value="1">London</option>
+                                    <option value="2">Test 1</option>
+                                    <option value="3">Test 2</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="mb-2 mb-sm-3">Do you use any of these?</h4>
+                            <div class="d-flex">
+                                <div class="input-group checkbox w-auto mr-4 mr-sm-5">
+                                    <label class="m-0">
+                                        Netflix <input type="checkbox">
+                                        <span class="icon"></span>
+                                    </label>
+                                </div>
+                                <div class="input-group checkbox w-auto">
+                                    <label class="m-0">
+                                        Amazon <input type="checkbox">
+                                        <span class="icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 justify-content-end d-none d-xl-flex">
+                            <button class="c-button s-md success font-weight-bold">Register</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg pr-0 d-flex flex-column buttons">
+                        <button class="c-button s-md success font-weight-bold mb-4 d-xl-none d-inline-flex">Register</button>
+                        <h4 class="mb-4 font-weight-bold">Or, connect with Facebook</h4>
+                        <a class="c-button s-md facebook">
+                            <span class="icon-facebook"></span>
+                            facebook
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="js/moment.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initSettingsModal();
+        setTime();
+        animateHeaderBg();
+        initHomeGrid();
+        initHomeGridPopover();
+        initSidenav();
+        initSettingsPopup();
+
+        $(window).on('resize', setTime);
+        $(window).on('scroll', animateHeaderBg);
+
+        $('#sign-in-modal .sign-up-link').on('click', function() {
+            $('#sign-up-modal .c-select select').selectpicker();
+            $('#sign-in-modal').modal('hide');
+            setTimeout(function() {
+                $('#sign-up-modal').modal({
+                    backdrop: 'static'
+                });
+            }, 500);
+        });
+
+        $('#sign-up-modal .login-in-link').on('click', function() {
+            $('#sign-up-modal').modal('hide');
+            setTimeout(function() {
+                $('#sign-in-modal').modal({
+                    backdrop: 'static'
+                });
+            }, 500);
+        });
+
+        $(document).ready(function(){
+            $('#sign-up-modal .birthdate .day').inputmask({
+                regex: "^(3[01]|[12][0-9]|0?[1-9])$",
+                placeholder: 'dd'
+            });
+            $('#sign-up-modal .birthdate .month').inputmask({
+                regex: "^(1[012]|0?[1-9])$",
+                placeholder: 'mm'
+            });
+            $('#sign-up-modal .birthdate .year').inputmask('9999', {
+                placeholder: 'yyyy'
+            });
+        });
+
+
+    });
+
+    function initHomeGrid() {
+        $('.time-bar-js').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 8,
+            draggable: false,
+            touchMove: false,
+            centerMode: false,
+            variableWidth: true
+        });
+
+        $('.time-bar-js').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            let width;
+
+            if ($(window).width() > 575) {
+                width = nextSlide * 216;
+            } else {
+                width = nextSlide * 130;
+            }
+
+            $('#grid #grid-js').css('transform', `translateX(-${width}px)`);
+        });
+
+        updateLinePos();
+
+        setInterval(function() {
+            updateLinePos();
+        }, (1000 * 60));
+
+
+
+        function updateLinePos() {
+            const date = moment();
+            const hours = date.hour();
+            const minutes = date.minutes();
+            const slideWidth = $('.time-bar-js .slick-slide').width() + 16;
+            const percents = Number((minutes / 60).toFixed(2));
+            const total = (slideWidth * hours) * 2 + (slideWidth * 2) * percents;
+
+            $('.time-line').css('left', `${total}px`);
+        }
+
+    }
+
+    function animateHeaderBg() {
+        const bg = $('#main-header .active-episode-js .bg-layer');
+        if ( $(window).width() > 1200 ) {
+            const scrolled = $(window).scrollTop();
+            bg.css('background-position-y', -(scrolled * 0.2) + 'px');
+        } else {
+            bg.removeAttr('style');
+        }
+    }
+
+    function setTime() {
+        const width = $(window).width();
+        if (width > 1200) {
+            $('#grid-menu .date-js').text(moment().format("dddd, D MMMM"));
+        } else {
+            $('#grid-menu .date-js').text(moment().format("ddd D MMM"));
+        }
+    }
+
+    function initSettingsModal() {
+        const containerSelector = '#channels';
+        const containers = document.querySelectorAll(containerSelector);
+
+        if (containers.length === 0) {
+            return false;
+        }
+
+        const sortable = new Draggable.Sortable(containers, {
+            draggable: '.alert',
+            mirror: {
+                appendTo: 'body',
+                constrainDimensions: true,
+            },
+        });
+
+        sortable.on('drag:start', (e) => {
+            const target = e.sensorEvent.data.target;
+            if ( $(target).hasClass('drag-area') || $(target).parent().hasClass('drag-area') ) {
+               return;
+            }
+            e.cancel();
+        });
+
+    }
+
+    function initHomeGridPopover() {
+
+        const cardsList = $('#grid-js .grid-item');
+
+        cardsList.popover({
+            trigger: 'manual',
+            placement: 'auto',
+            fallbackPlacement: 'flip',
+            html: true,
+            content: `
+                <div class="d-flex">
+                    <div class="c-card-content">
+                        <div>
+                            <span class="genre badge badge-info badge-pill">game show</span>
+                            <span class="cert ml-2">R18</span>
+                        </div>
+                        <h4 class="title mb-2">Lord of The Rings: The Fellowship of The Ring</h4>
+                        <div class="mb-2 meta-data">
+                            <strong class="year mr-4">2001</strong>
+                            <strong class="mr-4 d-inline-flex align-items-center up">Rating 6.7</strong>
+                            <strong class="d-inline-flex align-items-center down">Popularity 67893</strong>
+                        </div>
+                        <p class="descr mb-2">A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.</p>
+                        <div class="duration"><strong>Starts 8:30pm</strong>, duration 1h 30min, ends 10:00pm</div>
+                    </div>
+                    <aside class="d-flex justify-content-between flex-column pl-4">
+                        <div class="d-flex justify-content-center">
+                            <span class="icon-close"></span>
+                        </div>
+                        <div class="d-flex flex-column buttons">
+                            <a class="mb-2">
+                                <span class="icon-bell"></span>
+                            </a>
+                            <a class="mb-2">
+                                <span class="icon-thumbs-up"></span>
+                            </a>
+                            <a>
+                                <span class="icon-thumbs-down"></span>
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            `,
+            template: `
+                <div class="popover home-grid" role="tooltip">
+                    <div class="arrow"></div>
+                    <h3 class="popover-header"></h3>
+                    <div class="popover-body text-white"></div>
+                </div>
+            `
+        });
+
+        cardsList.on('inserted.bs.popover', function () {
+            const source= $(this);
+            const id = '#' + $(this).attr('aria-describedby');
+            const popover = $(id);
+            popover.find('.icon-close').on('click', function() {
+                source.popover('hide');
+            });
+        });
+
+        cardsList.on('click', function() {
+            cardsList.each(function() {
+                $(this).popover('hide');
+            });
+            $(this).popover('show');
+        });
+
+    }
+
+    function initSidenav() {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function (e) {
+            e.preventDefault();
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    }
+
+    function initSettingsPopup() {
+        $('#settings-modal .c-select select').selectpicker();
+
+        $('#channels-search-js').on('keyup', function() {
+            const value = $(this).val();
+            $("#settings-modal .add-channel .text").unmark({
+                done: function(count) {
+                    const listItems = $("#settings-modal .add-channel li");
+                    listItems.removeClass('d-none');
+                    if (value.length > 0) {
+                        listItems.removeClass('d-flex').addClass('d-none');
+                    } else {
+                        listItems.removeClass('d-none').addClass('d-flex');
+                    }
+                }
+            }).mark(this.value, {
+                done: function() {
+                    $("#settings-modal .add-channel li .mark-js").each(function() {
+                        $(this).closest('li').addClass('d-flex')
+                    });
+                    $("#settings-modal .add-channel li").each(function() {
+                        if ( !$(this).hasClass('d-flex') ) {
+                            $(this).addClass('d-none');
+                        }
+                    });
+                },
+                className: 'mark-js'
+            });
+        });
+    }
+
+</script>
+
+</body>
+</html>

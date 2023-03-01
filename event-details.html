@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>TVGuide - Event Details</title>
+
+</head>
+<body>
+
+    <div class="page event-details-page">
+
+        <nav id="sidebar" class="text-white">
+
+            <div class="sidebar-header d-flex position-relative">
+                <a href="#" class="log-out position-absolute">log out</a>
+                <div class="avatar mr-3 d-flex align-items-center">
+                    <span class="icon-user-solid-circle"></span>
+                </div>
+                <div>
+                    <div class="label">Logged in as:</div>
+                    <div class="email">francisco@tvguide.co.uk</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="#">TV Guide</a>
+                            <ul class="list-unstyled mt-2 sub-nav">
+                                <li>
+                                    <a href="#">Channels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">VOD</a>
+                                </li>
+                                <li>
+                                    <a href="trending.html">Trending</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="new-on-tv.html">New On TV</a>
+                        </li>
+                        <li>
+                            <a href="new-films.html">New Films</a>
+                        </li>
+                        <li>
+                            <a href="sports.html">Sports</a>
+                        </li>
+                        <li class="active">
+                            <a href="football.html">Football</a>
+                        </li>
+                        <li>
+                            <a href="my-calendar.html" class="d-flex justify-content-between">
+                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-inline-flex align-items-center" data-toggle="modal" data-target="#settings-modal" data-backdrop="static">
+                                <span class="icon-cog mr-3"></span> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+        <div id="page-content">
+
+            <header id="main-header">
+
+                <div class="ad text-center d-none d-sm-block">
+                    <a href="#">
+                        <img class="img-fluid" src="img/banner.jpg">
+                    </a>
+                </div>
+
+                <div class="position-relative d-flex flex-column align-items-center header-content">
+                    <div class="nav-wrapper w-100 nav-wrapper-js">
+                        <div class="container-fluid">
+                            <div class="justify-content-between align-items-start d-none d-xl-flex">
+                                <nav class="nav-a">
+                                    <ul class="list-unstyled d-flex m-0">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/logo.png" alt="TVGuide">
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="tv-listings.html">TV Listings</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-on-tv.html"> New on TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-films.html">New Films</a>
+                                        </li>
+                                        <li>
+                                            <a href="sports.html">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="football.html">Football</a>
+                                        </li>
+                                        <li>
+                                            <a href="my-calendar.html">
+                                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex search align-items-center flex-grow-1 justify-content-end">
+                                    <form class="mr-5 ml-5">
+                                        <input type="search" placeholder="Search for Shows or Films ...">
+                                        <button><span class="icon-search"></span></button>
+                                    </form>
+                                    <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="d-flex d-xl-none justify-content-between align-items-start text-white mobile-nav">
+                                <div class="d-flex">
+                                    <a href="#" class="d-flex align-items-center" >
+                                        <img src="img/logo.png">
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="d-none d-sm-flex search align-items-center flex-grow-1 justify-content-end">
+                                        <form class="mr-4">
+                                            <input type="search" placeholder="Search ...">
+                                            <button><span class="icon-search"></span></button>
+                                        </form>
+                                    </div>
+                                    <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                        <span class="icon-menu"></span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                        <span class="icon-user-solid-circle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-search d-sm-none">
+                        <form action="" class="form-inline my-2 my-lg-0">
+                            <input class="form-control" type="search" placeholder="Search for Shows or Films ..." aria-label="Search for Shows or Films">
+                            <button type="submit">
+                                <span class="icon-search"></span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="details-header text-white w-100" style="background-image: url('img/details/header-bg-3.jpg');">
+                        <div class="content d-flex justify-content-end flex-column pb-3">
+                            <h1 class="mb-2 mb-sm-3 font-weight-bold">
+                                Live Laver Cup <br> Tennis
+                            </h1>
+                            <div class="d-flex align-items-center mb-2 mb-sm-3">
+                                <img class="channel-logo" src="img/channels/sky-sports.png" alt="sky sports">
+                                <div class="ml-2">
+                                    <div class="start-time font-weight-bold mb-1">6.30pm Today</div>
+                                    <div class="time-before-start">(4 hours)</div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                Sky: 121 Virgin: 510
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+            <section id="details" class="text-white">
+
+                <div>
+                    <div class="row">
+
+                        <div class="col-xl-7">
+                            <div class="d-flex mb-3 mb-sm-4 flex-wrap">
+                                <div class="stars d-flex align-items-center mr-2">
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full filled mr-sm-1"></span>
+                                    <span class="icon-star-full"></span>
+                                </div>
+                                <span class="icon-thumbs-up icon-circle mr-1"></span>
+                                <span class="icon-thumbs-down icon-circle mr-3 mr-md-5"></span>
+
+                                <span class="set-alert mr-3 mr-md-5">
+                                    <span class="d-none d-sm-inline">Set Alert:</span>
+                                    <span class="icon-bell icon-circle ml-1"></span>
+                                </span>
+                            </div>
+
+
+                            <div class="d-flex">
+                                <h4 class="heading mr-2">Category:</h4>
+                                <h4 class="secondary-heading">Tennis</h4>
+                            </div>
+                            <p class="event-desc mb-3">
+                                Coverage of the opening day of the men's tournament, which sees European players
+                                take on a Rest of the World team on a hard court at United Centre in Chicago.
+                            </p>
+
+                            <div class="d-flex mb-4 align-items-baseline">
+                                <h4 class="heading mr-3">Category:</h4>
+                                <div>
+                                    <span class="category sports">sports</span>
+                                </div>
+                            </div>
+
+                            <div class="add-review mb-4">
+                                <h4 class="heading">TVGuide.co.uk User Reviews:</h4>
+                                <form action="" class="d-flex">
+                                    <input type="text" placeholder="Add your review:" class="flex-grow-1">
+                                    <button type="submit" class="text-uppercase ml-2">Post</button>
+                                </form>
+                            </div>
+
+                            <div class="reviews mb-4">
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">Agatha</div>
+                                    <p class="comment m-0">
+                                        For Dr Yuhana Younis who stood up so calmly and resolutely to the furious man demanding sick notes instead if working.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">dontbelieveallyouread</div>
+                                    <p class="comment m-0">
+                                        Thanks for that. My fault for putting the kettle on too soon!
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">10:47pm Thu 15 Feb</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">mrwhistle</div>
+                                    <p class="comment m-0">
+                                        They tell you at the end of the programme.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:00pm Thu 15 Feb</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">jackdaniel</div>
+                                    <p class="comment m-0">
+                                        Only wish we got feed back about some the problems.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <div class="review mb-3 mb-sm-4">
+                                    <div class="author">sarah tyson</div>
+                                    <p class="comment m-0">
+                                        This is an awesome show keep them coming. It's informative and excellent.
+                                    </p>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="date">8:50pm Wed 5 Sep</span>
+                                        <a href="#" class="ml-2">Report Abuse</a>
+                                        <a href="#" class="ml-2">Reply</a>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="more-comments font-weight-bold">Show more</a>
+                            </div>
+
+                        </div><!-- .col-lg-7 -->
+
+                    </div> <!-- .row -->
+                </div>
+
+            </section>
+
+            <footer id="main-footer">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                        <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                    </div>
+                    <div class="content d-flex align-items-center flex-column align-items-md-start">
+                        <nav>
+                            <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manage consent</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="copyright text-center text-sm-left">
+                            © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                            <a href="#">Now in 50 Countries!</a>
+                        </div>
+                        <div>
+                            <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                            <form action="">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="text-uppercase">Go</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row align-items-center">
+                            <div class="social mr-sm-5 mb-3 mb-sm-0">
+                                <a href="#" class="facebook mr-2">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                                <a href="#" class="twitter mr-2">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                                <a href="#" class="linkedin mr-2">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                                <a href="#" class="snapchat">
+                                    <span class="icon-snapchat-ghost"></span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="mr-1">
+                                    <img src="img/google-play.svg" alt="Get it on Google Play">
+                                </a>
+                                <a href="#">
+                                    <img src="img/app-store.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="sidenav-overlay"></div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script src="js/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initSidenav();
+
+        $('#details .actors').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            draggable: false,
+            touchMove: false,
+            centerMode: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 4
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
+            //variableWidth: true
+        });
+
+    });
+
+    function initSidenav() {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

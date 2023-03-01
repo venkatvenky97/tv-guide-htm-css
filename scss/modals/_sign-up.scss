@@ -1,0 +1,144 @@
+@import '../variables';
+@import '../mixins';
+
+#sign-up-modal {
+
+    .c-select {
+        width: 200px;
+    }
+
+    .modal-dialog {
+        max-width: 464px;
+        padding-top: 30px;
+
+        @media (min-width: 576px) {
+            padding-top: 60px;
+        }
+
+        @media (min-width: 992px) {
+            max-width: 864px;
+        }
+    }
+
+    .login-in-link {
+        color: $c-accent-2;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 300;
+        @media (min-width: 576px) {
+            font-size: 32px;
+        }
+    }
+
+    h4 {
+        font-size: 14px;
+        @media (min-width: 576px) {
+            font-size: 20px;
+        }
+    }
+
+    input {
+        background: 0;
+        border: 0;
+        border-bottom: 1px solid $c-white;
+        color: $c-white;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .gender {
+        width: 100px;
+        @media (min-width: 576px) {
+            width: 190px;
+        }
+        .checkbox {
+            line-height: 1;
+        }
+    }
+
+    .birthdate {
+        input {
+            @include placeholder-color($c-white);
+            font-size: 12px;
+            @media (min-width: 576px) {
+                font-size: 16px;
+            }
+        }
+        .day,
+        .month {
+            width: 26px;
+            @media (min-width: 576px) {
+                width: 40px;
+            }
+        }
+        .year {
+            width: 56px;
+            @media (min-width: 576px) {
+                width: 80px;
+            }
+        }
+    }
+
+    .checkbox-label,
+    .input-group label {
+        font-size: 14px;
+        @media (min-width: 576px) {
+            font-size: 18px;
+        }
+    }
+
+    .input-group {
+
+        &.checkbox {
+            input {
+                display: none;
+
+                &:checked + span:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 10px;
+                    height: 6px;
+                    border-left: 2px solid $c-white;
+                    border-bottom: 2px solid $c-white;
+                    transform: rotate(-45deg);
+                    top: 3px;
+                    left: 3px;
+                }
+            }
+
+            .icon {
+                margin-left: 10px;
+                cursor: pointer;
+                position: relative;
+                width: 18px;
+                height: 18px;
+                display: inline-flex;
+                border: 1px solid $c-white;
+            }
+        }
+    }
+
+    .buttons {
+        padding: 0;
+
+        @media  (min-width: 992px) {
+            padding-left: 45px;
+            margin-left: 45px;
+        }
+
+        @media (min-width: 1200px) {
+            border-left: 1px solid $c-white;
+        }
+
+        .c-button {
+            @media (min-width: 576px) and (max-width: 991px) {
+                width: 270px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import '../variables';
+
+$c-add-genre-border: #959595;
+
+.genre-page {
+
+    .add-genre {
+        border: 1px dashed $c-add-genre-border;
+        width: 100%;
+        max-width: calc(100vw - 95px);
+        padding: 0 20px;
+        min-height: 150px;
+
+        @media (min-width: 576px) {
+            padding: 0 50px;
+            min-height: 234px;
+            max-width: calc(1440px - 110px);
+            width: calc(100vw - 135px);
+        }
+
+        @media (min-width: 768px) {
+            padding: 0 100px;
+        }
+
+        h4 {
+            font-size: 14px;
+
+            @media (min-width: 576px) {
+                font-size: 21px;
+            }
+        }
+
+        .c-select {
+            max-width: 190px;
+        }
+    }
+
+}

@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>TVGuide - Football</title>
+
+</head>
+<body>
+
+    <div class="page football-page">
+
+        <nav id="sidebar" class="text-white">
+
+            <div class="sidebar-header d-flex position-relative">
+                <a href="#" class="log-out position-absolute">log out</a>
+                <div class="avatar mr-3 d-flex align-items-center">
+                    <span class="icon-user-solid-circle"></span>
+                </div>
+                <div>
+                    <div class="label">Logged in as:</div>
+                    <div class="email">francisco@tvguide.co.uk</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="#">TV Guide</a>
+                            <ul class="list-unstyled mt-2 sub-nav">
+                                <li>
+                                    <a href="#">Channels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">VOD</a>
+                                </li>
+                                <li>
+                                    <a href="trending.html">Trending</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="new-on-tv.html">New On TV</a>
+                        </li>
+                        <li>
+                            <a href="new-films.html">New Films</a>
+                        </li>
+                        <li>
+                            <a href="sports.html">Sports</a>
+                        </li>
+                        <li class="active">
+                            <a href="football.html">Football</a>
+                        </li>
+                        <li>
+                            <a href="my-calendar.html" class="d-flex justify-content-between">
+                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-inline-flex align-items-center" data-toggle="modal" data-target="#settings-modal" data-backdrop="static">
+                                <span class="icon-cog mr-3"></span> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+        <div id="page-content">
+
+            <header id="main-header">
+
+                <div class="ad text-center d-none d-sm-block">
+                    <a href="#">
+                        <img class="img-fluid" src="img/banner.jpg">
+                    </a>
+                </div>
+
+                <div class="position-relative d-flex flex-column align-items-center header-content no-bg">
+                    <div class="nav-wrapper w-100 nav-wrapper-js">
+                        <div class="container-fluid">
+                            <div class="justify-content-between align-items-start d-none d-xl-flex">
+                                <nav class="nav-a">
+                                    <ul class="list-unstyled d-flex m-0">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/logo.png" alt="TVGuide">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tv-listings.html">TV Listings</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-on-tv.html"> New on TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-films.html">New Films</a>
+                                        </li>
+                                        <li>
+                                            <a href="sports.html">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="football.html">Football</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="my-calendar.html">
+                                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+                                    <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="d-flex d-xl-none justify-content-between align-items-center align-items-xl-start text-white mobile-nav">
+                                <div class="d-flex">
+                                    <a href="#" class="d-flex align-items-center" >
+                                        <img src="img/logo.png">
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                        <span class="icon-menu"></span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                        <span class="icon-user-solid-circle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section id="premier-league" class="pb-5 pt-3">
+
+                <div>
+                    <div class="w-100 text-white d-flex flex-column justify-content-end">
+                        <div class="form-wrapper">
+                            <h1 class="mb-3 mb-sm-4 pb-sm-2 font-weight-bold">
+                                Premier League Fixtures <span class="d-none d-sm-inline">2018/2019</span>
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="row text-white">
+                        <div class="col-lg-8">
+                            <div class="league-fixture-list mb-5">
+                                <h4 class="date">Monday 17 September</h4>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">
+                                                    <span class="score">2</span> - <span class="score">2</span>
+                                                </span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="league-fixture-list">
+                                <h4 class="date">Monday 17 September</h4>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center league-fixture justify-content-between flex-column flex-sm-row">
+                                    <div class="d-flex d-sm-none justify-content-between w-100 mb-2">
+                                        <div class="d-flex align-items-center">
+                                            <div class="channel-logo">
+                                                <img src="img/football/sky-sports.png" alt="Sky sports">
+                                            </div>
+                                            <div class="start-time">10.00pm</div>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                            <span class="icon-bell"></span>
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <div class="start-time">10.00pm</div>
+                                        <div class="channel-logo">
+                                            <img src="img/football/sky-sports.png" alt="Sky sports">
+                                        </div>
+                                    </div>
+                                    <div class="teams d-flex align-items-center">
+                                        <div class="team-logo mr-2">
+                                            <img src="img/football/brighton.png" alt="Brighton">
+                                        </div>
+                                        <div class="flex-fill">
+                                            <div class="d-flex align-items-end">
+                                                <div class="team-name flex-fill">Brighton</div>
+                                                <span class="vs">vs</span>
+                                                <div class="team-name flex-fill text-right">Fulham</div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-none d-sm-flex">
+                                                <div class="info col-6 p-0">35' Højbjerg, 65' Ings</div>
+                                                <div class="info col-6 p-0 text-right">67' Duffy, 72 James, 90'+1...</div>
+                                            </div>
+                                        </div>
+                                        <div class="team-logo ml-2">
+                                            <img src="img/football/fulham.png" alt="Fulham">
+                                        </div>
+                                    </div>
+                                    <div class="d-none d-sm-flex align-items-center">
+                                        <img src="img/football/calendar.svg" alt="Calendar icon" class="calendar">
+                                        <span class="icon-bell"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <aside class="col-lg-4 league-table d-none d-lg-block">
+                            <h4 class="title">Premier League Table <span class="d-none d-xl-inline">2018 / 2019</span></h4>
+                            <div class="labels d-flex">
+                                <div class="pos text-center">Pos</div>
+                                <div class="club flex-fill">
+                                    <span class="ml-3"></span>Club
+                                </div>
+                                <div class="pld text-center">Pld</div>
+                                <div class="pts text-center">Pts</div>
+                            </div>
+                            <div class="rows">
+                                <div class="table-row d-flex teal-blue">
+                                    <div class="text-center pos">1</div>
+                                    <div class="flex-fill club up">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex teal-blue">
+                                    <div class="text-center pos">2</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex teal-blue">
+                                    <div class="text-center pos">3</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex teal-blue">
+                                    <div class="text-center pos">4</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex teal-blue">
+                                    <div class="text-center pos">5</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">6</div>
+                                    <div class="flex-fill club down">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">7</div>
+                                    <div class="flex-fill club down">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">8</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">9</div>
+                                    <div class="flex-fill club down">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">10</div>
+                                    <div class="flex-fill club down">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">11</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">12</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">13</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">14</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">15</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">16</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex gray">
+                                    <div class="text-center pos">17</div>
+                                    <div class="flex-fill club up">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex dark-red">
+                                    <div class="text-center pos">18</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex dark-red">
+                                    <div class="text-center pos">19</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                                <div class="table-row d-flex dark-red">
+                                    <div class="text-center pos">20</div>
+                                    <div class="flex-fill club no-rating">Chelsea</div>
+                                    <div class="text-center pld">5</div>
+                                    <div class="text-center pts">15</div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer id="main-footer">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                        <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                    </div>
+                    <div class="content d-flex align-items-center flex-column align-items-md-start">
+                        <nav>
+                            <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manage consent</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="copyright text-center text-sm-left">
+                            © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                            <a href="#">Now in 50 Countries!</a>
+                        </div>
+                        <div>
+                            <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                            <form action="">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="text-uppercase">Go</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row align-items-center">
+                            <div class="social mr-sm-5 mb-3 mb-sm-0">
+                                <a href="#" class="facebook mr-2">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                                <a href="#" class="twitter mr-2">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                                <a href="#" class="linkedin mr-2">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                                <a href="#" class="snapchat">
+                                    <span class="icon-snapchat-ghost"></span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="mr-1">
+                                    <img src="img/google-play.svg" alt="Get it on Google Play">
+                                </a>
+                                <a href="#">
+                                    <img src="img/app-store.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="sidenav-overlay"></div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initSidenav();
+
+        $('.c-select select').selectpicker();
+
+    });
+
+    function initSidenav() {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

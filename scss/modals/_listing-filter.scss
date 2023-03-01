@@ -1,0 +1,21 @@
+@import '../variables';
+
+.modal.listing-filters {
+    .modal-dialog {
+        max-width: 280px;
+        padding-bottom: 56px;
+    }
+
+    footer {
+        background: $c-gray-8;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        .wrapper {
+            max-width: 280px;
+        }
+    }
+}

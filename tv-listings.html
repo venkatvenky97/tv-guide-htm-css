@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>TVGuide - TV Listings</title>
+
+</head>
+<body>
+
+    <div class="page tv-listings-page">
+
+        <nav id="sidebar" class="text-white">
+
+            <div class="sidebar-header d-flex position-relative">
+                <a href="#" class="log-out position-absolute">log out</a>
+                <div class="avatar mr-3 d-flex align-items-center">
+                    <span class="icon-user-solid-circle"></span>
+                </div>
+                <div>
+                    <div class="label">Logged in as:</div>
+                    <div class="email">francisco@tvguide.co.uk</div>
+                </div>
+            </div>
+
+            <div class="content">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li class="active">
+                            <a href="#">TV Guide</a>
+                            <ul class="list-unstyled mt-2 sub-nav">
+                                <li class="active">
+                                    <a href="#">Channels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Genre</a>
+                                </li>
+                                <li>
+                                    <a href="#">VOD</a>
+                                </li>
+                                <li>
+                                    <a href="trending.html">Trending</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="new-on-tv.html">New On TV</a>
+                        </li>
+                        <li>
+                            <a href="new-films.html">New Films</a>
+                        </li>
+                        <li>
+                            <a href="sports.html">Sports</a>
+                        </li>
+                        <li>
+                            <a href="football.html">Football</a>
+                        </li>
+                        <li>
+                            <a href="my-calendar.html" class="d-flex justify-content-between">
+                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-inline-flex align-items-center" data-toggle="modal" data-target="#settings-modal" data-backdrop="static">
+                                <span class="icon-cog mr-3"></span> Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+
+        <div id="page-content">
+
+            <header id="main-header">
+
+                <div class="ad text-center d-none d-sm-block">
+                    <a href="#">
+                        <img class="img-fluid" src="img/banner.jpg">
+                    </a>
+                </div>
+
+                <div class="position-relative d-flex flex-column align-items-center header-content no-bg">
+                    <div class="nav-wrapper w-100 nav-wrapper-js">
+                        <div class="container-fluid">
+                            <div class="justify-content-between align-items-start d-none d-xl-flex">
+                                <nav class="nav-a">
+                                    <ul class="list-unstyled d-flex m-0">
+                                        <li>
+                                            <a href="#">
+                                                <img src="img/logo.png" alt="TVGuide">
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="tv-listings.html">TV Listings</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-on-tv.html"> New on TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="new-films.html">New Films</a>
+                                        </li>
+                                        <li>
+                                            <a href="sports.html">Sports</a>
+                                        </li>
+                                        <li>
+                                            <a href="football.html">Football</a>
+                                        </li>
+                                        <li>
+                                            <a href="my-calendar.html">
+                                                My Calendar <span class="badge badge-light text-white ml-2">10</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+                                    <a href="#" class="sign-in" data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="d-flex d-xl-none justify-content-between align-items-center align-items-xl-start text-white mobile-nav">
+                                <div class="d-flex">
+                                    <a href="#" class="d-flex align-items-center" >
+                                        <img src="img/logo.png">
+                                    </a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" id="sidebarCollapse" class="text-white sidenav-btn mr-4">
+                                        <span class="icon-menu"></span>
+                                    </a>
+                                    <a data-toggle="modal" data-target="#sign-in-modal" data-backdrop="static" class="user-nav-btn">
+                                        <span class="icon-user-solid-circle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="w-100 text-white d-none d-xl-flex flex-column justify-content-end" id="listing-search">
+                <div class="form-wrapper">
+                    <h1>BBC One</h1>
+                    <form class="input-group">
+                        <input type="search" placeholder="Search for Shows or Films ....">
+                        <button type="submit"><span class="icon-search"></span></button>
+                    </form>
+                </div>
+            </div>
+
+            <section id="listing-section">
+                <div class="d-flex flex-column flex-lg-row">
+
+                    <aside>
+                        <div class="d-none d-xl-flex flex-column c-listing-filters">
+
+                            <div class="c-select mb-3">
+                                <select>
+                                    <option selected value="1">Provider</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="c-select mb-3">
+                                <select>
+                                    <option selected value="1">TV</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="c-select mb-3">
+                                <select>
+                                    <option selected value="1">Films</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="c-select mb-3">
+                                <select>
+                                    <option selected value="1">Sports</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="c-select mb-3">
+                                <select>
+                                    <option selected value="1">Time</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+
+                            <div class="chips-list">
+                                <div class="mb-3">
+                                    <div class="chip">
+                                        BBC One <span class="icon-minus-alt"></span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="chip">
+                                        Today <span class="icon-minus-alt"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-xl-none">
+                            <h2 class="text-white mb-2">BBC One</h2>
+                            <form class="mb-3 position-relative d-flex">
+                                <input type="search" placeholder="Search..." class="w-100">
+                                <button type="submit" class="position-absolute">
+                                    <span class="icon-search"></span>
+                                </button>
+                            </form>
+                            <div class="d-flex justify-content-between align-items-center mb-4 mb-lg-0">
+                                <button class="filters-btn d-flex align-items-center justify-content-center">
+                                    <span class="icon-add"></span>
+                                </button>
+                                <div class="c-select dark time">
+                                    <select>
+                                        <option selected value="1">Time</option>
+                                        <option value="2">Lorem ipsum</option>
+                                        <option value="3">Lorem ipsum</option>
+                                    </select>
+                                    <div class="outline"></div>
+                                </div>
+                            </div>
+
+                            <div class="search-result font-weight-bold text-white mt-4 mb-2">
+                                32 Results for <span class="value">Doctor Who</span>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                    <div class="flex-fill content">
+
+                        <div class="d-none d-xl-flex justify-content-between align-items-center mb-4 text-white">
+                            <div class="search-result font-weight-bold">
+                                32 Results for <span class="value">Doctor Who</span>
+                            </div>
+                            <div class="c-select dark time mb-3">
+                                <select>
+                                    <option selected value="1">Time</option>
+                                    <option value="2">Lorem ipsum</option>
+                                    <option value="3">Lorem ipsum</option>
+                                </select>
+                                <div class="outline"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg grid-item">
+                                <div class="c-card text-white d-flex flex-column justify-content-between channel bbc-two">
+                                    <div class="col p-0 d-flex justify-content-between align-items-start">
+                                        <div class="logo">
+                                            <div class="d-flex align-items-center">
+                                                <img src="img/channels/bbc-two.png" alt="BBC Two">
+                                                <span class="ml-2 date">6.00pm<br>Today</span>
+                                            </div>
+                                        </div>
+                                        <span class="badge text-uppercase">Drama</span>
+                                    </div>
+                                    <div class="desc col d-flex justify-content-end flex-column">
+                                        <h6 class="title font-weight-bold">
+                                            Princess Margaret: The Rebel Royal
+                                        </h6>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="sub-title">S1 E8</div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating d-flex up mr-2">
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full filled"></span>
+                                                    <span class="icon-star-full"></span>
+                                                </div>
+                                                <div class="down popularity">Popularity: 62556</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="main-footer">
+                <div class="container-fluid d-flex flex-column flex-md-row">
+                    <div class="logo d-flex justify-content-center mb-4 mb-md-0">
+                        <a href="#"><img src="img/logo.png" alt="TVGuide"></a>
+                    </div>
+                    <div class="content d-flex align-items-center flex-column align-items-md-start">
+                        <nav>
+                            <ul class="list-unstyled text-uppercase d-flex flex-wrap justify-content-center justify-content-sm-start">
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Advertise</a>
+                                </li>
+                                <li>
+                                    <a href="#">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manage consent</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="copyright text-center text-sm-left">
+                            © 2018 TVGuide.co.uk Ltd TV Listings. All right reserved & trademarks acknowledged.
+                            <a href="#">Now in 50 Countries!</a>
+                        </div>
+                        <div>
+                            <div class="tip mb-2 mb-sm-0">Never miss a show sign up to our newsletter:</div>
+                            <form action="">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="text-uppercase">Go</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row align-items-center">
+                            <div class="social mr-sm-5 mb-3 mb-sm-0">
+                                <a href="#" class="facebook mr-2">
+                                    <span class="icon-facebook"></span>
+                                </a>
+                                <a href="#" class="twitter mr-2">
+                                    <span class="icon-twitter"></span>
+                                </a>
+                                <a href="#" class="linkedin mr-2">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                                <a href="#" class="snapchat">
+                                    <span class="icon-snapchat-ghost"></span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="mr-1">
+                                    <img src="img/google-play.svg" alt="Get it on Google Play">
+                                </a>
+                                <a href="#">
+                                    <img src="img/app-store.svg" alt="Download on the App Store">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div id="sidenav-overlay"></div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        initSidenav();
+
+        $('.c-select select').selectpicker();
+
+    });
+
+    function initSidenav() {
+
+        $('#dismiss, #sidenav-overlay, #sidebar .content ul a').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#sidenav-overlay').removeClass('active');
+            $('body').removeAttr('style');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('body').css('overflow', 'hidden');
+            // fade in the overlay
+            $('#sidenav-overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    }
+
+
+</script>
+
+</body>
+</html>

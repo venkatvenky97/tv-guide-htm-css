@@ -1,0 +1,153 @@
+@import 'variables';
+
+$c-facebook-bg: #385596;
+$c-twitter-bg: #55acee;
+$c-linkedin-bg: #0082ca;
+$c-snapchart-bg: #fffe00;
+
+#main-footer {
+    background: $c-black;
+    padding: 40px 0;
+    color: $c-white;
+
+    nav {
+
+        ul {
+            align-items: center;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        li {
+            margin: 0 12px 10px 0;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:nth-child(n+2):before {
+                @media (min-width: 576px) {
+                    content: '';
+                    display: inline-flex;
+                    width: 1px;
+                    height: 12px;
+                    background: $c-white;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        a {
+            color: $c-white;
+            font-weight: 500;
+            transition: color .25s;
+            font-size: 11px;
+            &:hover {
+                color: $c-gray-2;
+            }
+        }
+    }
+
+    .content {
+        @media (min-width: 768px) {
+            border-left: 1px solid darken($c-gray-2, 25%);
+            margin-left: 30px;
+            padding-left: 30px;
+        }
+    }
+
+    .copyright {
+        color: $c-gray-2;
+        font-size: 11px;
+        margin-bottom: 15px;
+
+        a {
+            color: $c-accent-1;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .tip {
+        font-size: 11px;
+    }
+
+    form {
+        font-size: 11px;
+        display: flex;
+        margin-bottom: 20px;
+
+        input {
+            background: 0;
+            border: 0;
+            border-bottom: 1px solid $c-white;
+            color: $c-white;
+            padding: 0 0 5px 0;
+            line-height: 21px;
+            width: 160px;
+            transition: border-color .25s;
+
+            @media (min-width: 576px) {
+                width: 260px;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: $c-accent-1;
+            }
+        }
+
+        button {
+            background: 0;
+            border: 1px solid $c-white;
+            color: $c-white;
+            margin-left: 3px;
+            font-weight: 700;
+            width: 60px;
+            cursor: pointer;
+            transition: border-color .25s;
+            &:hover {
+                border-color: $c-accent-1;
+            }
+        }
+    }
+
+    .social {
+        font-size: 12px;
+        display: inline-flex;
+
+        a {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            border-radius: 50%;
+            color: $c-white;
+            align-items: center;
+            justify-content: center;
+            transition: opacity .25s;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    .facebook {
+        background: $c-facebook-bg;
+    }
+
+    .twitter {
+        background : $c-twitter-bg;
+    }
+
+    .linkedin {
+        background: $c-linkedin-bg;
+    }
+
+    .snapchat {
+        background: $c-snapchart-bg;
+        text-shadow: 0 0 2px $c-black;
+        font-size: 18px;
+    }
+
+}

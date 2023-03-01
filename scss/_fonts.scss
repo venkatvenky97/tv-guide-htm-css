@@ -1,0 +1,95 @@
+@import 'variables';
+
+@font-face {
+    font-family: 'TVGuide icons';
+    src:  url('./fonts/icons.eot?fvvxeq');
+    src:  url('./fonts/icons.eot?fvvxeq#iefix') format('embedded-opentype'),
+    url('./fonts/icons.ttf?fvvxeq') format('truetype'),
+    url('./fonts/icons.woff?fvvxeq') format('woff'),
+    url('./fonts/icons.svg?fvvxeq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'TVGuide icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-view_list:before {
+    content: "\e905";
+}
+.icon-check:before {
+    content: "\e907";
+}
+.icon-chevron-right:before {
+    content: "\e902";
+}
+.icon-chevron-left:before {
+    content: "\e903";
+}
+.icon-user-solid-circle:before {
+    content: "\e906";
+}
+.icon-star-full:before {
+    content: "\e904";
+}
+.icon-snapchat-ghost:before {
+    content: "\e901";
+}
+.icon-search:before {
+    content: "\e900";
+}
+.icon-cog:before {
+    content: "\e994";
+    text-shadow: 0 3px 5px rgba($c-black, .4);
+}
+.icon-facebook:before {
+    content: "\ea90";
+}
+.icon-twitter:before {
+    content: "\ea96";
+}
+.icon-linkedin:before {
+    content: "\eaca";
+}
+.icon-menu:before {
+    content: "\e908";
+}
+.icon-chevron-down:before {
+    content: "\e909";
+}
+.icon-thumbs-down:before {
+    content: "\e90a";
+}
+.icon-thumbs-up:before {
+    content: "\e90b";
+}
+.icon-bell:before {
+    content: "\e90c";
+}
+.icon-close:before {
+    content: "\e90d";
+}
+.icon-play:before {
+    content: "\e90e";
+}
+.icon-plus:before {
+    content: "\e90f";
+}
+.icon-minus-alt:before {
+    content: "\e911";
+}
+.icon-add:before {
+    content: "\e910";
+}

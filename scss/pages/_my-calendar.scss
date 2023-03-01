@@ -1,0 +1,14 @@
+@import '../variables';
+
+$c-calendar-title: #a4fcff;
+
+.my-calendar-page {
+    .calendar-title {
+        font-size: 14px;
+        color: $c-calendar-title;
+
+        @media (min-width: 576px) {
+            font-size: 21px;
+        }
+    }
+}

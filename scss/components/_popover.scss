@@ -1,0 +1,125 @@
+@import '../variables';
+
+.popover.home-grid {
+    max-width: 465px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba($c-black, .6);
+    padding: 0;
+
+    &[x-placement^=left] {
+        .arrow::after {
+            border-left-color: $c-black;
+        }
+    }
+
+    &[x-placement^=right] {
+        .arrow::after {
+            border-right-color: $c-black;
+        }
+    }
+
+    &[x-placement^=top] {
+        .arrow::after {
+            border-top-color: $c-black;
+        }
+    }
+
+    &[x-placement^=bottom] {
+        .arrow::after {
+            border-bottom-color: $c-black;
+        }
+    }
+
+    .popover-body {
+        padding: 10px 15px;
+        background: linear-gradient(to bottom, transparent, $c-black), url($IMG_PATH + '/home/grid/popover-bg.jpg') no-repeat;
+    }
+
+    .badge {
+        background: $c-genre-badge;
+        padding: 8px 17px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .cert {
+        height: 34px;
+        width: 34px;
+        background: rgba($c-white, .6);
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $c-white;
+        font-size: 11px;
+        color: $c-black;
+        font-weight: 700;
+    }
+
+    .title {
+        font-size: 24px;
+        max-width: 260px;
+        font-weight: 700;
+        margin-top: 45px;
+    }
+
+    .meta-data {
+
+        .up:after,
+        .down:after {
+            content: '';
+            display: inline-flex;
+            position: relative;
+            margin-left: 5px;
+        }
+        .up:after {
+            border: 5px solid transparent;
+            border-bottom: 8px solid $c-popularity-up;
+            top: -1px;
+        }
+        .down:after {
+            border: 5px solid transparent;
+            border-top: 8px solid $c-popularity-down;
+            top: 3px;
+        }
+    }
+
+    .descr {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .buttons {
+        a {
+            height: 36px;
+            width: 36px;
+            border: 2px solid $c-white;
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: border .25s;
+
+            &:hover {
+                border-color: $c-accent-2;
+            }
+        }
+    }
+
+    .icon-close {
+        cursor: pointer;
+        font-size: 26px;
+        color: $c-accent-2;
+        border: 1px solid $c-accent-2;
+        border-radius: 50%;
+        background: rgba($c-white, .7);
+        transition: all .5s;
+
+        &:hover {
+            background: $c-accent-2;
+            color: $c-white;
+        }
+    }
+}

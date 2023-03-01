@@ -1,0 +1,102 @@
+@import '../variables';
+
+
+.home-page {
+    #grid {
+        .grid-item {
+            margin-right: 10px;
+
+            @media (min-width: 576px) {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    #now-next-grid {
+        .c-card {
+            .episode {
+                font-size: 11px;
+            }
+
+            .up:after {
+                top: -3px;
+            }
+
+            .down:after {
+                top: 2px;
+            }
+        }
+    }
+
+    .suggested-channels {
+        background: $c-gray-9;
+        overflow: initial !important;
+
+        h5 {
+            font-size: 12px;
+            font-weight: 700;
+
+            span {
+                font-size: 10px;
+                font-weight: 400;
+            }
+        }
+
+        .row {
+            background: linear-gradient(to right, rgba($c-black, .3), transparent 75px);
+        }
+
+        .channel-info {
+            background: $c-gray-9 !important;
+            box-shadow: none !important;
+        }
+
+        .channel {
+            border: 1px dashed $c-white;
+            border-radius: 6px;
+            width: 124px;
+            height: 47px;
+            padding-left: 6px;
+            transition: border .3s;
+            margin-right: 10px;
+
+            &:hover {
+                border-color: $c-accent-2;
+
+                .icon-add {
+                    color: $c-accent-2;
+                }
+            }
+        }
+
+        .logo {
+            img {
+                max-height: 35px;
+                max-width: 60px;
+                width: 100%;
+            }
+        }
+
+        .icon-add {
+            font-size: 24px;
+            transition: color .3s;
+        }
+
+        .quick-add {
+            font-size: 11px;
+
+            &:after {
+                display: none;
+            }
+
+            .icon-chevron-down {
+                transform: rotate(180deg);
+                font-size: 14px;
+            }
+        }
+
+        .dropdown-menu {
+            font-size: 12px;
+        }
+    }
+}

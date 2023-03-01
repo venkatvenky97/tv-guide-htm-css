@@ -1,0 +1,43 @@
+@import '../variables';
+
+$c-badge: #ce3d32;
+$c-channel-bbc-two: #3f8a91;
+
+.trending-page {
+
+}
+
+#trending-grid {
+    padding: 30px 15px 15px 20px;
+
+    @media (min-width: 576px) {
+        padding: 30px 30px 30px 20px;
+    }
+
+    .headline {
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+    }
+
+    .c-card {
+        height: 175px;
+        max-width: 313px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, transparent, rgba($c-black, .5)), url($IMG_PATH + '/trending/card-bg.jpg');
+        margin-bottom: 20px;
+
+        &.lg {
+            height: 370px;
+            background-image: linear-gradient(to bottom, transparent, rgba($c-black, .5)), url($IMG_PATH + '/trending/card-lg-bg.jpg');
+        }
+    }
+
+    .desc {
+        padding: 0 8px 10px 12px;
+    }
+
+    .ad {
+        padding-right: 20px;
+    }
+}
